@@ -1,10 +1,18 @@
 // Render
 export default function renderBooks(data) {
-    const main = document.querySelector('main');
-    const results = data.results;
+    const container = document.querySelector('.overview');
+    let results = data.results;
     console.log(data);
     console.log('data', results);
-    
+
+    document.querySelector('.wrapper').classList.toggle('hide');
+    document.querySelector('.overview').classList.toggle('show');
+
+    // Local storage for prototyping, REMOVE LATER
+    let storedData = JSON.parse( localStorage.getItem('books'));
+    storedData ? results = storedData : localStorage.setItem('books', JSON.stringify(results));
+    //
+
     if (results.length !== 0) {
         // Render new data
         results.forEach((item) => {
@@ -17,10 +25,10 @@ export default function renderBooks(data) {
                     }">
                     </article>
                 `;
-            main.insertAdjacentHTML('beforeend', html);
+            container.insertAdjacentHTML('beforeend', html);
         });
     }
     else {
-        main.insertAdjacentHTML('beforeend', 'Geen boeken gevonden!');
+        container.insertAdjacentHTML('beforeend', 'Geen boeken gevonden!');
     }
 }

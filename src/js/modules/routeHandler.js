@@ -5,6 +5,7 @@ export async function genreOverview(input) {
     try {
         // Get books
         const books = await getBooks(input);
+        console.log('books: ', books)
         console.log(books);
         console.log('test')
         // Render books
