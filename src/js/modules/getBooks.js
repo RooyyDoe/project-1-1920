@@ -15,5 +15,6 @@ export default function getBooks(query) {
     };
 
     // Fetch
-    return Fetcher.get(url, config);
+    return Fetcher.get(url, config)
+        .then(data => {return data.results})
 }
