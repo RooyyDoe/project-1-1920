@@ -8,6 +8,7 @@ export default function renderBooks(data) {
   document.querySelector(".wrapper").classList.toggle("hide");
   document.querySelector(".content-wrapper").classList.toggle("hide");
   document.querySelector(".overview").classList.toggle("show");
+  document.querySelector(".overview-header").classList.toggle("show");
 
   if (results.length !== 0) {
     // Render new data

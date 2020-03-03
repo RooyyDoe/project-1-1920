@@ -1,10 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:400, 800");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
 
-* {
-  box-sizing: border-box;
-}
-
 html {
   margin: 0;
   padding: 0;
@@ -55,6 +51,11 @@ h1 {
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
+}
+
+.wrapper h1 {
+    text-align: left;
+    padding-left: 0;
 }
 
 .search-wrapper {
@@ -112,9 +113,17 @@ h1 {
   padding: 5% 10%;
 }
 
+.overview-header {
+    display: none;
+    margin-left: 2em;
+}
+
 /* Book articles */
 article {
   width: 25%;
+  background-color: #b2ecf8;
+  padding: 1em;
+  margin: 2em 2em 2em 0em;
 }
 
 /*=====  End of search block section  ======*/
@@ -262,7 +271,8 @@ figure.suggestion.pink h2 {
 }
 
 .show {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* loading dots */
