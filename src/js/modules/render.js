@@ -1,9 +1,12 @@
 // Render
 export default function renderBooks(data) {
-    const main = document.querySelector('main');
+    const container = document.querySelector('.overview');
     const results = data.results;
     console.log(data);
     console.log('data', results);
+
+    document.querySelector('.wrapper').classList.toggle('hide');
+    document.querySelector('.overview').classList.toggle('show');
     
     if (results.length !== 0) {
         // Render new data
@@ -17,10 +20,10 @@ export default function renderBooks(data) {
                     }">
                     </article>
                 `;
-            main.insertAdjacentHTML('beforeend', html);
+            container.insertAdjacentHTML('beforeend', html);
         });
     }
     else {
-        main.insertAdjacentHTML('beforeend', 'Geen boeken gevonden!');
+        container.insertAdjacentHTML('beforeend', 'Geen boeken gevonden!');
     }
 }

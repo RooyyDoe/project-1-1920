@@ -2,13 +2,9 @@ import search from './modules/utils.js'
 import './vendor/routie.js'
 
 routie({
-  // Genre overview
+  // Search field + genres
   '': () => {
     document.querySelector("#search").addEventListener("click", search);
   }
-  // Games overview
-  //   ":genre": routeHandler.gamesOverview,
-  // Game detail page
-  //   "/:name": routeHandler.gameDetails
+  // Books overview
 });
-
