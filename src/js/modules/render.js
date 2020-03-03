@@ -6,6 +6,7 @@ export default function renderBooks(data) {
     console.log('data', data);
 
     document.querySelector('.wrapper').classList.toggle('hide');
+    document.querySelector('.suggestion-wrapper').classList.toggle('hide');
     document.querySelector('.overview').classList.toggle('show');
 
     if (results.length !== 0) {
