@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)http://127.0.0.1:5500/project-1-1920/index.html#overview -->
+<html lang="nl" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Oba - Zoek een boek</title>
+    <link rel="stylesheet" href="./Oba - Zoek een boek_files/styles.css">
+  </head>
+  <body>
+    <div class="header">
+      <a href="http://127.0.0.1:5500/project-1-1920/index.html"><img src="./Oba - Zoek een boek_files/logo.66b1d35.png"></a>
+    </div>
+    <div class="wrapper hide">
+      <h1>Waar wil je meer over weten?</h1>
+      <div class="search-wrapper">
+        <input id="search-input" type="text" placeholder="Ik wil lezen over..">
+        <a href="http://127.0.0.1:5500/project-1-1920/index.html#overview"><button id="search">Zoek!</button></a>
+      </div>
+    </div>
+
+    <div class="suggestion-wrapper hide">
+      <figure class="suggestion blue">
+        <img src="./Oba - Zoek een boek_files/dieren.jpg" alt="dieren">
+        <figcaption>
+          <h2>Dieren</h2>
+        </figcaption>
+        <a href="http://127.0.0.1:5500/project-1-1920/index.html#"></a>
+      </figure>
+      <figure class="suggestion blue">
+        <img src="./Oba - Zoek een boek_files/natuur.jpg" alt="natuur">
+        <figcaption>
+          <h2>Natuur</h2>
+        </figcaption>
+        <a href="http://127.0.0.1:5500/project-1-1920/index.html#"></a>
+      </figure>
+      <figure class="suggestion blue">
+        <img src="./Oba - Zoek een boek_files/sport.jpg" alt="sport">
+        <figcaption>
+          <h2>Sport</h2>
+        </figcaption>
+        <a href="http://127.0.0.1:5500/project-1-1920/index.html#"></a>
+      </figure>
+      <figure class="suggestion blue">
+        <img src="./Oba - Zoek een boek_files/techniek.jpg" alt="techniek">
+        <figcaption>
+          <h2>Techniek &amp; Wetenschap</h2>
+        </figcaption>
+        <a href="http://127.0.0.1:5500/project-1-1920/index.html#"></a>
+      </figure>
+      <figure class="suggestion blue">
+        <img src="./Oba - Zoek een boek_files/landen.jpg" alt="landen">
+        <figcaption>
+          <h2>Landen &amp; Steden</h2>
+        </figcaption>
+        <a href="http://127.0.0.1:5500/project-1-1920/index.html#"></a>
+      </figure>
+      <figure class="suggestion blue">
+        <img src="./Oba - Zoek een boek_files/socialmedia.jpg" alt="socialmedia">
+        <figcaption>
+          <h2>Social Media</h2>
+        </figcaption>
+        <a href="http://127.0.0.1:5500/project-1-1920/index.html#"></a>
+      </figure>
+      <figure class="suggestion blue">
+        <img src="./Oba - Zoek een boek_files/muziek.jpg" alt="muziek">
+        <figcaption>
+          <h2>Muziek</h2>
+        </figcaption>
+        <a href="http://127.0.0.1:5500/project-1-1920/index.html#"></a>
+      </figure>
+      <figure class="suggestion blue">
+        <img src="./Oba - Zoek een boek_files/geschiedenis.jpg" alt="geschiedenis">
+        <figcaption>
+          <h2>Geschiedenis</h2>
+        </figcaption>
+        <a href="http://127.0.0.1:5500/project-1-1920/index.html#"></a>
+      </figure>
+      <figure class="suggestion blue">
+        <img src="./Oba - Zoek een boek_files/culturen.jpg" alt="culturen">
+        <figcaption>
+          <h2>Culturen</h2>
+        </figcaption>
+        <a href="http://127.0.0.1:5500/project-1-1920/index.html#"></a>
+      </figure>
+    </div>
+
+    <div class="overview show">Geen boeken gevonden!</div>
+    <script type="module" src="./Oba - Zoek een boek_files/app.js"></script>
+  <!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
