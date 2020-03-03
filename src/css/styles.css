@@ -9,29 +9,41 @@ html {
 }
 
 body {
-  background-image: linear-gradient(
-      rgba(32, 32, 32, 0.8),
-      rgb(32, 32, 32, 0.8) 70%
-    ),
-    url(../images/books.jpg);
-  background-size: cover;
+  background-color: #96d5e2;
   padding: 0;
   margin: 0;
   width: 100vw;
   height: 100vh;
   margin: 0 auto;
-  padding: 1em;
+}
+
+.header {
+  z-index: 10;
+  margin: 0;
+  padding: 1em 6.5em;
+  width: 100%;
+  font-size: 1.3em;
+  color: white;
+  background-color: rgb(255, 255, 255, 0.7);
+  top: 0;
+  position: sticky;
+}
+
+.header > img {
+  width: auto;
+  height: 70px;
 }
 
 h1 {
   text-align: left;
-  padding-left: 1em;
-  color: white;
+  font-size: 2.5em;
+  padding-left: 0.5em;
+  color: black;
 }
 
 .wrapper {
   position: fixed;
-  top: 45%;
+  top: 30%;
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
@@ -39,24 +51,42 @@ h1 {
 
 .search-wrapper {
   display: flex;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 1em 1em;
 }
 
 #search-input {
-  padding: 1em;
-  margin-right: 0.5em;
+  outline: none;
+  padding: 1.5em;
+  border: 2px solid white;
   font-size: 1em;
   width: 60em;
   font-family: "Montserrat";
+  transition: all 0.3s ease-in-out;
+}
+
+::placeholder {
+  opacity: 0.4;
+}
+
+#search-input:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 1.5em;
+  border: 2px solid rgba(81, 203, 238, 1);
 }
 
 #search {
   font-family: "Montserrat";
-  padding: 1.7em 4.5em;
+  font-size: 1.5em;
+  outline: none;
+  margin-left: 0.3em;
+  padding: 0.5em 3em;
   border: none;
   color: white;
   background-color: rgba(254, 1, 0, 0.8);
+  cursor: pointer;
+}
+
+#search:active {
+  transform: scale(0.95);
 }
 
 .loading {
