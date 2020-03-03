@@ -1,17 +1,17 @@
-import * as utils from "./utils.js";
-import * as getBooks from "./modules/getBooks.js";
-import * as renderBooks from "./modules/render.js";
+import getBooks from './getBooks.js';
+import renderBooks from './render.js';
 
-export async function genreOverview() {
-  try {
-    // Get books
-    const books = await getBooks(input);
-    console.log(books);
-    // Render books
-    renderBooks(books);
-  } catch (err) {
-    console.log(err);
-  } finally {
-    console.log("Done?");
-  }
+export async function genreOverview(input) {
+    try {
+        // Get books
+        const books = await getBooks(input);
+        console.log(books);
+        console.log('test')
+        // Render books
+        renderBooks(books);
+    } catch (err) {
+        console.log(err);
+    } finally {
+        console.log("Done?");
+    }
 }

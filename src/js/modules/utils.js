@@ -1,8 +1,9 @@
-document.querySelector("#search").addEventListener("click", search);
+import { genreOverview } from './routeHandler.js';
 
-function search() {
-  // Remove old data
-  document.querySelector("main").innerHTML = "";
-  // Get search value
-  const input = document.querySelector("#search-input").value;
+export default function search() {
+    // Remove old data
+    document.querySelector("main").innerHTML = "";
+    // Get search value
+    const input = document.querySelector("#search-input").value;
+    genreOverview(input);
 }
