@@ -1,13 +1,18 @@
 // Render
 export default function renderBooks(data) {
     const container = document.querySelector('.overview');
-    const results = data.results;
+    let results = data.results;
     console.log(data);
     console.log('data', results);
 
     document.querySelector('.wrapper').classList.toggle('hide');
     document.querySelector('.overview').classList.toggle('show');
-    
+
+    // Local storage for prototyping, REMOVE LATER
+    let storedData = JSON.parse( localStorage.getItem('books'));
+    storedData ? results = storedData : localStorage.setItem('books', JSON.stringify(results));
+    //
+
     if (results.length !== 0) {
         // Render new data
         results.forEach((item) => {
