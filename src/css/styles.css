@@ -83,6 +83,7 @@
     color: white;
     background-color: rgba(254, 1, 0, 0.8);
     cursor: pointer;
+    height: 100%;
   }
   
   #search:active {
