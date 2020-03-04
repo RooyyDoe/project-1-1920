@@ -14,18 +14,21 @@ function handleHomeState() {
     document.querySelector(".container__home").setAttribute("style", "display: initial;");
     document.querySelector(".container__overview").setAttribute("style", "display: none;");
     document.querySelector(".container__detail").setAttribute("style", "display: none;");
+    document.querySelector("html").setAttribute("style", "overflow-y: initial;");
 };
 
 function handleOverviewState() {
     document.querySelector(".container__home").setAttribute("style", "display: none;");
     document.querySelector(".container__overview").setAttribute("style", "display: initial;");
     document.querySelector(".container__detail").setAttribute("style", "display: none;");
+    document.querySelector("html").setAttribute("style", "overflow-y: hidden;");
 };
 
 function handleDetailState() {
     document.querySelector(".container__home").setAttribute("style", "display: none;");
     document.querySelector(".container__overview").setAttribute("style", "display: none;");
     document.querySelector(".container__detail").setAttribute("style", "display: initial;");
+    document.querySelector("html").setAttribute("style", "overflow-y: initial;");
 };
 
 document.querySelector(".fullscreen").addEventListener("click", () => {
