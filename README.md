@@ -2,6 +2,8 @@
 
 The whole process of project 1 OBA will be documented here!
 
+This project is made by: (Stefan Gerrits)[https://github.com/StefanGerrits2] & (Roy Kuijper)[https://github.com/RooyyDoe]
+
 ### Overview Page
 ![screencapture-127-0-0-1-5500-project-1-1920-index-html-2020-03-04-13_05_37](https://user-images.githubusercontent.com/40355914/75878051-41d6a200-5e19-11ea-8a37-2f035b97b7f8.png)
 
@@ -71,7 +73,7 @@ A handlebars expression is a `{{`, some contents, followed by a `}}`. When the t
 
 The data that I will be using for my applicatipon is comming directly come out of the [OBA API](https://zoeken.oba.nl/landelijk/api/v1/help/). This is a library API that gives out data about books that they have available to rent out.
 
-In the **Game overview page** I am using this API endpoint: 
+In the **Book overview page** I am using this API endpoint: 
 
 > https://zoeken.oba.nl/api/v1/search/?q=
 
@@ -86,7 +88,7 @@ This will be returning the following data:
 
 ***
 
-In the **Detail page** I am using this API endpoint: 
+In the **Presentation Template page** I am using this API endpoint: 
 
 > https://zoeken.oba.nl/api/v1/search/?id=
 
