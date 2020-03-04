@@ -1,7 +1,7 @@
 import getBooks from './getBooks.js';
-import renderBooks from './render.js';
+import * as render from './render.js';
 
-export async function genreOverview(input) {
+async function genreOverview(input) {
     try {
          // Local storage for prototyping, REMOVE LATER
         let books = []
@@ -23,10 +23,14 @@ export async function genreOverview(input) {
         console.log(books);
         console.log('test')
         // Render books
-        renderBooks(books);
+        render.renderBooks(books);
     } catch (err) {
         console.log(err);
     } finally {
         console.log("Done?");
     }
+}
+
+export {
+    genreOverview,
 }
