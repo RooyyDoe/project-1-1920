@@ -118,7 +118,6 @@ h1 {
 }
 
 .overview {
-  display: none;
   background-color: white;
   height: 100vh;
   width: 100vw;
@@ -126,7 +125,6 @@ h1 {
 }
 
 .overview-header {
-  display: none;
   margin-left: 2em;
 }
 
@@ -142,7 +140,7 @@ h1 {
   height: 100vh;
 }
 
-.detail-container button {
+.container__detail button {
   height: 2em;
 }
 
@@ -394,18 +392,7 @@ figure.suggestion.pink h2 {
   visibility: hidden;
 }
 
-/* HIDE AND SHOW */
-.hide {
-  display: none;
-}
-
-.show {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 /* loading dots */
-
 .loading:after {
   content: " .";
   animation: dots 1s steps(5, end) infinite;

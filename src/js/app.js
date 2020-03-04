@@ -4,23 +4,20 @@ import * as render from './modules/render.js';
 import './vendor/routie.js';
 
 routie({
-    // Search field + genres
+    // Home
     '': () => {
         document.querySelector("#search").addEventListener("click", utils.search);
+        utils.handleHomeState();
     },
+    // Overview
     ':overview': () => {  
-        console.log('overview');},
-    // Books favourite
-    '/:favorieten': () => {
-        console.log('favorieten');
-        document.querySelector(".wrapper").classList.toggle("hide");
-        document.querySelector(".content-wrapper").classList.toggle("hide");
-        document.querySelector(".my-favourites").classList.toggle("hide");
-        document.querySelector(".favourites").classList.toggle("show");
+        console.log('overview');
+        utils.handleOverviewState();
     },
+    // Detail page / Presentation templates
     'book/:id': (id) => {
         filterClickedItem(id);
-
+        utils.handleDetailState();
     }
 });
 
