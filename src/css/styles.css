@@ -245,7 +245,7 @@ section > a:nth-child(20n + 20) {
 
 /*=====  End of search block section  ======*/
 
-.suggestion-wrapper > button {
+.suggestion-wrapper button {
   border: none;
   outline: none;
   cursor: pointer;
