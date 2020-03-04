@@ -2,7 +2,7 @@
 
 The whole process of project 1 OBA will be documented here!
 
-This project is made by: (Stefan Gerrits)[https://github.com/StefanGerrits2] & (Roy Kuijper)[https://github.com/RooyyDoe]
+This project is made by: [Stefan Gerrits](https://github.com/StefanGerrits2) & [Roy Kuijper](https://github.com/RooyyDoe)
 
 ### Overview Page
 ![screencapture-127-0-0-1-5500-project-1-1920-index-html-2020-03-04-13_05_37](https://user-images.githubusercontent.com/40355914/75878051-41d6a200-5e19-11ea-8a37-2f035b97b7f8.png)
