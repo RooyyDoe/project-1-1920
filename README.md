@@ -33,7 +33,7 @@ In the start screen of my product users are presented with a list of all gaming 
 
 **Clone the repository of the project**
 ```
-git clone https://github.com/RooyyDoe/web-app-from-scratch-1920.git
+git clone https://github.com/RooyyDoe/project-1-1920.git
 ```
 
 **Run code**
@@ -43,92 +43,35 @@ Run the index.html into your browser
 
 (Live demo if needed)
 
-**Demo** is also live at: **Still Loading**§
+**Demo** is also live at: [Demo](https://rooyydoe.github.io/project-1-1920/)
 
 ## Handlebars.js
 
-For this project I've used handlebars as template engine. I had used a template engine once before in a project but this was running on `nodeJS`. This was way different then what I needed to do right now. I have to say it is still a easy way to generate HTML. I like how easy you can do a `forEach` in a template and it will just show all the results in the object/array.
+Handlebars is a simple templating language.
 
-I do think it looks a bit messy if you use `handlebars.js` **client-side**. I think this also can be code better than I am doing right now. But I am making a `<script>` tag in the HTML and write the whole template inside this. I am adding a `id` to it and requests this with a `doc.getElementByID`. And I am compiling the HTML into a handlebars template and then I am putting it into another element to show it on the interface of the user.
+It uses a template and an input object to generate HTML or other text formats. Handlebars templates look like regular text with embedded Handlebars expressions.
+
+```
+<p>{{firstname}} {{lastname}}</p>
+
+```
+
+A handlebars expression is a `{{`, some contents, followed by a `}}`. When the template is executed, these expressions are replaced with values from an input object.
 
 ## API
 
-The data that I will be using for my applicatipon is comming directly come out of the [RAWG API](https://rawg.io/). This is the largest open video games database that there is. **RAWG** is sharing around 350,000+ games, search, and machine learning recommendations with the world.
-
-This API is working with pagination, this will mean that I will get only 20 results when I make a call. This also can be extended by `page_size`. This call will be to heavy to render and will slow down the productivity of the application by big numbers. That's why I am going to use a `loadMore` function.
-
-***
-
-In the **Genre page** I am using this API endpoint: 
-
-> https://api.rawg.io/api/genres
-
-This will be returning the following data:
-
-<details>
- <summary>Genre page</summary>
- 
- ```javascript
- 
- {
-  "count": 0,
-  "next": "http://example.com",
-  "previous": "http://example.com",
-  "results": [
-    {
-    "id": 0,
-    "name": "string",
-    "slug": "string",
-    "games_count": 0,
-    "image_background": "http://example.com"
-    }
-  ]
-}
- 
- ```
- 
-</details>
-
-***
+The data that I will be using for my applicatipon is comming directly come out of the [OBA API](https://zoeken.oba.nl/landelijk/api/v1/help/). This is a library API that gives out data about books that they have available to rent out.
 
 In the **Game overview page** I am using this API endpoint: 
 
-> https://api.rawg.io/api//games?genres=<string>
+> https://zoeken.oba.nl/api/v1/search/?q=
 
 This will be returning the following data:
 
 <details>
- <summary>Game overview page</summary>
+ <summary>Books data</summary>
  
- ```javascript
- 
- {
-"count": 0,
-"next": "http://example.com",
-"previous": "http://example.com",
-"results": [
-    {
-    "id": 0,
-    "slug": "string",
-    "name": "string",
-    "released": "2020-02-10",
-    "tba": true,
-    "background_image": "http://example.com",
-    "rating": 0,
-    "rating_top": 0,
-    "ratings": { },
-    "ratings_count": 0,
-    "reviews_text_count": "string",
-    "added": 0,
-    "added_by_status": { },
-    "metacritic": 0,
-    "playtime": 0,
-    "suggestions_count": 0
-    }
-  ]
-}
- 
- ```
+<img width="633" alt="screenshot_2020-03-02_at_17 21 02" src="https://user-images.githubusercontent.com/40355914/75886927-4dca6000-5e29-11ea-8d97-0cc5db37fd92.png">
  
 </details> 
 
@@ -136,60 +79,14 @@ This will be returning the following data:
 
 In the **Detail page** I am using this API endpoint: 
 
-> https://api.rawg.io/api/games/{id} 
+> https://zoeken.oba.nl/api/v1/search/?id=
 
-This will be returning the following data of the game:
+This will be returning the following data:
 
 <details>
- <summary>Detail page</summary>
+ <summary>book data</summary>
  
- ```javascript
- 
- {
-  "id": 0,
-  "slug": "string",
-  "name": "string",
-  "name_original": "string",
-  "description": "string",
-  "metacritic": 0,
-  "released": "2020-02-10",
-  "tba": true,
-  "updated": "2020-02-10T11:09:20Z",
-  "background_image": "http://example.com",
-  "background_image_additional": "string",
-  "website": "http://example.com",
-  "rating": 0,
-  "rating_top": 0,
-  "ratings": { },
-  "reactions": { },
-  "added": 0,
-  "added_by_status": { },
-  "playtime": 0,
-  "screenshots_count": 0,
-  "movies_count": 0,
-  "creators_count": 0,
-  "achievements_count": 0,
-  "parent_achievements_count": "string",
-  "reddit_url": "string",
-  "reddit_name": "string",
-  "reddit_description": "string",
-  "reddit_logo": "http://example.com",
-  "reddit_count": 0,
-  "twitch_count": "string",
-  "youtube_count": "string",
-  "reviews_text_count": "string",
-  "ratings_count": 0,
-  "suggestions_count": 0,
-  "alternative_names": [
-  "string"
-  ],
-  "metacritic_url": "string",
-  "parents_count": 0,
-  "additions_count": 0,
-  "game_series_count": 0
-}
- 
- ```
+![image](https://user-images.githubusercontent.com/45566396/75886934-4efb8d00-5e29-11ea-9f12-f0e4ca52339e.png)
  
 </details>
 
