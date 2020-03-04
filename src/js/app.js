@@ -1,8 +1,7 @@
 import * as utils from './modules/utils.js';
-import getBooks from './modules/getBooks.js';
+import * as get from './modules/getBooks.js';
 import * as render from './modules/render.js';
 import './vendor/routie.js';
-import { renderBooks } from './modules/render.js';
 
 routie({
     // Search field + genres
@@ -27,12 +26,12 @@ routie({
 
 async function filterClickedItem(id) {
     // Get search value
-    const input = document.querySelector("#search-input").value;
-    const books = await getBooks(input); 
+    // const input = document.querySelector("#search-input").value;
+    const books = await get.getBookDetail(id); 
 
-    const filteredObject = books.filter(utils.filterClickedBook(id));
+    // const filteredObject = books.filter(utils.filterClickedBook(id));
 
-    console.log('filtered:', filteredObject);
+    // console.log('filtered:', filteredObject);
 
-    render.renderDetail(filteredObject);
+    render.renderDetail(books);
 }

@@ -10,13 +10,6 @@ function search() {
     overview.genreOverview(input);
 }
 
-function filterClickedBook(id) {
-    return function(item) {
-        return item.id == id;
-    };
-}
-
 export {
     search,
-    filterClickedBook,
 }

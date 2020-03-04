@@ -1,4 +1,4 @@
-import getBooks from './getBooks.js';
+import * as get from './getBooks.js';
 import * as render from './render.js';
 
 async function genreOverview(input) {
@@ -12,13 +12,13 @@ async function genreOverview(input) {
         }
         else {
             console.log('fetching'); 
-            books = await getBooks(input); 
-            localStorage.setItem('books', JSON.stringify(await getBooks(input)))
+            books = await get.getBooks(input); 
+            localStorage.setItem('books', JSON.stringify(await get.getBooks(input)))
         };
         //
 
         // Get books ADD LATER
-        // const books = await getBooks(input);
+        // const books = await get.getBooks(input);
         console.log('books: ', books)
         console.log(books);
         console.log('test')
