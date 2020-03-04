@@ -89,9 +89,20 @@
         </figure>
       </div>
     </div>
-    <div class="overview-header"><h2>Gevonden resultaten voor: "<span class="results-feedback"></span>"</h2></div>
+    <div class="overview-header"><h2>Gevonden resultaten voor: "<span class="results-feedback"></span>"</h1></div>
+    <div class="overview" id="main"></div>
     <div class="favourites"><h1>Jouw favorieten</h1></div>
-    <div class="overview"></div>
+
+    <script id="overviewTemplate" type="text/x-handlebars-template">
+        {{#each this}}
+            <article class="overview-wrapper">
+                <img src="{{coverimages.[1]}}">
+            </article>
+        {{/each}}
+    </script>
+
+
+    <script src="./src/js/vendor/handlebars-v4.7.3.js"></script>
     <script type="module" src="./src/js/app.js"></script>
   </body>
 </html>
