@@ -245,10 +245,29 @@ section > a:nth-child(20n + 20) {
 
 /*=====  End of search block section  ======*/
 
+.suggestion-wrapper a {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0em;
+  margin: 1em;
+  border: 1px dashed rgba(0, 0, 0, 0.5);
+}
+
+.suggestion-wrapper a:hover {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0em;
+  margin: 1em;
+  border: 1px solid black;
+}
+
 .suggestion-wrapper button {
   border: none;
   outline: none;
   cursor: pointer;
+  margin: 0em;
   background-color: transparent;
 }
 
@@ -270,10 +289,8 @@ figure.suggestion {
   position: relative;
   overflow: hidden;
   margin: 1em;
-  min-width: 400px;
-  max-width: 310px;
-  max-height: 250px;
-  width: 100%;
+  width: 400px;
+  height: 250px;
   background: #000000;
   color: #ffffff;
   text-align: center;
@@ -306,6 +323,7 @@ figure.suggestion h2 {
   position: absolute;
   left: 40px;
   right: 40px;
+  font-size: 2.2em;
   display: inline-block;
   background: #000000;
   -webkit-transform: skew(-10deg) rotate(-10deg) translate(0, -50%);
