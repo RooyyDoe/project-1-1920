@@ -385,6 +385,10 @@ figure.suggestion.pink h2 {
 
 /*=====  End of suggestion block  ======*/
 
+.hide {
+  display: none;
+}
+
 .loading {
   color: black;
   font-size: 5em;
