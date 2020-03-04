@@ -130,6 +130,22 @@ h1 {
   margin-left: 2em;
 }
 
+/* TEMPLATE */
+.template {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: rgb(57, 233, 163);
+  margin: 0em auto;
+}
+
+.template > div {
+  height: 100vh;
+}
+
+.detail-container button {
+  height: 2em;
+}
+
 /* Book articles */
 
 section {
@@ -230,6 +246,13 @@ section > a:nth-child(20n + 20) {
 }
 
 /*=====  End of search block section  ======*/
+
+.suggestion-wrapper > button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
 
 .suggestion-wrapper {
   width: 100%;
@@ -369,16 +392,6 @@ figure.suggestion.pink h2 {
   font-size: 5em;
   text-align: center;
   visibility: hidden;
-}
-
-/* Favourites */
-.favourites {
-  display: none;
-}
-
-.favourites h2 {
-  margin-left: 1.5em;
-  font-weight: 400;
 }
 
 /* HIDE AND SHOW */
