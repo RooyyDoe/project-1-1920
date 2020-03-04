@@ -130,6 +130,22 @@ h1 {
   margin-left: 2em;
 }
 
+/* TEMPLATE */
+.template {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: rgb(57, 233, 163);
+    margin: 0em auto;
+}
+
+.template > div {
+    height: 100vh;
+}
+
+.detail-container button {
+    height: 2em;
+}
+
 /* Book articles */
 
 section {
@@ -369,16 +385,6 @@ figure.suggestion.pink h2 {
   font-size: 5em;
   text-align: center;
   visibility: hidden;
-}
-
-/* Favourites */
-.favourites {
-  display: none;
-}
-
-.favourites h2 {
-  margin-left: 1.5em;
-  font-weight: 400;
 }
 
 /* HIDE AND SHOW */

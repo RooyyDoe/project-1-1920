@@ -2,22 +2,21 @@
 <html lang="nl" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>Oba - Zoek een boek</title>
+    <title>Oba - Presentatie helper</title>
     <link rel="stylesheet" href="./src/css/styles.css" />
   </head>
   <body>
     <div class="header">
       <a href=""><img src="./src/images/logo.66b1d35.png"/></a>
-      <a href="#/favorieten"><p class="my-favourites">Mijn favorieten</p></a>
     </div>
     <div class="overview-header"><h2>Gevonden resultaten voor: "<span class="results-feedback"></span>"</h2></div>
     <div class="wrapper">
-      <h1 contenteditable>Waar wil je meer over weten?</h1>
+      <h1 contenteditable>Over welk boek wil je een presentatie over maken?</h1>
       <div class="search-wrapper">
         <input
           id="search-input"
           type="text"
-          placeholder="Ik wil lezen over.."
+          placeholder="Ik wil een presentatie maken over..."
         />
         <a href="#overview"><button id="search">Zoek!</button></a>
       </div>
@@ -91,12 +90,19 @@
       </div>
     </div>
     <div class="overview" id="main"></div>
-    <div class="favourites"><h1>Jouw favorieten</h1></div>
     <div class="detail-container">
-      <input type="radio" name="template" value="1">
-      <input type="radio" name="template" value="2">
-      <input type="radio" name="template" value="3">
-      <input type="radio" name="template" value="4">
+        <button class="fullscreen">Volledig scherm</button>
+        <div class="radio-buttons">
+            <label for="1">Optie 1</label>
+            <input type="radio" name="template" id="1">
+            <label for="2">Optie 2</label>  
+            <input type="radio" name="template" id="2">
+            <label for="3">Optie 3</label>
+            <input type="radio" name="template" id="3">
+            <label for="4">Optie 4</label>
+            <input type="radio" name="template" id="4">
+        </div>
+      
     </div>
 
     <script id="overviewTemplate" type="text/x-handlebars-template">
@@ -113,11 +119,41 @@
 
     <script id="detailTemplate" type="text/x-handlebars-template">
       {{#each this}}
-          <a class="book" href="#book/{{id}}">
-            <article class="overview-wrapper">
-              <img src="{{coverimages.[1]}}">
-            </article>
-          </a>
+        <article class="template">
+            <div id="section1">
+                <h1>Naam Achternaam</h1>
+                <p>Klas</p>
+                <p>Datum</p>
+                <p>Groep</p>
+            </div>
+            <div id="section2">
+                <h2>{{titles.[0]}}</h2>
+                <img src="{{coverimages.[1]}}">
+                {{#with authors}}
+                    <p contenteditable>Auteur: {{this}} </p>
+                {{/with}}
+            </div>
+            <div id="section3"><h1>Meer over de auteur</h1></div>
+            <div id="section4">
+                <p>Uitgebracht in: {{year}}</p>
+
+                {{#with publisher}}
+                  <p contenteditable>Uitgeverij: {{this}} </p>
+                {{/with}}
+      
+                {{#with languages}}
+                  <p contenteditable>Taal: {{this}} </p>
+                {{/with}}
+      
+                {{#with summaries}}
+                  <p contenteditable>Samenvatting: {{this}} </p>
+                {{/with}}
+      
+                {{#with description}}
+                  <p contenteditable>Over: {{this}} </p>
+                {{/with}}
+            </div>
+        </article>
       {{/each}}
   </script>
 

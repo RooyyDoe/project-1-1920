@@ -25,13 +25,21 @@ routie({
 });
 
 async function filterClickedItem(id) {
-    // Get search value
-    // const input = document.querySelector("#search-input").value;
-    const books = await get.getBookDetail(id); 
+     // Local storage for prototyping, REMOVE LATER
+     let books = []
+     let storedData = JSON.parse(localStorage.getItem('book'));
+     if (storedData) {
+         console.log('no fetch')
+         books = storedData;
+     }
+     else {
+         console.log('fetching'); 
+         books = await get.getBookDetail(id); 
+         localStorage.setItem('book', JSON.stringify(await get.getBookDetail(id)))
+     };
 
-    // const filteredObject = books.filter(utils.filterClickedBook(id));
-
-    // console.log('filtered:', filteredObject);
+    // ADD LATER
+    // const books = await get.getBookDetail(id); 
 
     render.renderDetail(books);
 }

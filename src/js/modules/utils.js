@@ -10,6 +10,11 @@ function search() {
     overview.genreOverview(input);
 }
 
+document.querySelector('.fullscreen').addEventListener('click', () => {
+    document.querySelector('.header').classList.toggle('hide')
+    document.querySelector('.radio-buttons').classList.toggle('hide')
+});
+
 export {
     search,
 }
