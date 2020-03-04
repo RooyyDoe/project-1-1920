@@ -1,6 +1,6 @@
 # Project-1-1920 @cmda-minor-web 1820
 
-The whole process of project-1-1920 will be documented here!
+The whole process of project 1 OBA will be documented here!
 
 ### Overview Page
 ![screencapture-127-0-0-1-5500-project-1-1920-index-html-2020-03-04-13_05_37](https://user-images.githubusercontent.com/40355914/75878051-41d6a200-5e19-11ea-8a37-2f035b97b7f8.png)
@@ -23,11 +23,20 @@ This is a list of things me and [Stefan Gerrits](https://github.com/StefanGerrit
 
 Live link: [Demo](https://rooyydoe.github.io/project-1-1920/)
 
-- [X] 
+- [X] Brainstorming for a concept
+- [X] Fetched data from the OBA-API
+- [X] Made a search bar that actually works
+- [X] Generated data into HTML with a template engine
+- [X] Made different routes for the user to navigate to
+- [X] Making use of modules to structure the code
+- [X] Using WAFS and CSSTTR into this project
+- [X] Tool for online presentations for kids
+- [X] Generated presentation templates with the data of the books
+- [X] Full screen option for presentations
 
 ## Description
 
-In the start screen of my product users are presented with a list of all gaming genres. The user can select a genre out of this list that the user wants to know more about by clicking on it. The user is then directed to a new page where all the games within the selected genre are presented in a list in the same way as the genres were previously. The games within the selected genre are obtained using an RAWG API. The user is now able to select one of these games in the list to obtain more detailed information about it. When a certain game is selected, the user will be navigated to a new page with all sorts of details about the game.
+In the start screen of my product users are presented with a search input and theme suggestions. The user can select a theme out of the list that the user wants to know more about by clicking on it the user can also use the search input for this. The user is then directed to a new page where all the books within the selected theme or search output are floating of the top of ur screen down to the bottom. The books within the selected theme or search input are obtained using an OBA API. The user is now able to select one of the books that is floating down. When a certain book is selected, the user will be navigated to a new page where the user can select a presentation template. when the user has selected one of the presentation templates it will show all the data of the book in it. The user will also be able to edit the template on the way they like it to be. And when the user wants to present the presentation they can click on full screen can present this to the class or teacher.
 
 ## Usage
 
