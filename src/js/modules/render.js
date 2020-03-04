@@ -6,6 +6,7 @@ export default function renderBooks(data) {
   console.log("data", data);
 
   document.querySelector(".wrapper").classList.toggle("hide");
+  document.querySelector("html").classList.toggle("overflow-y");
   document.querySelector(".content-wrapper").classList.toggle("hide");
   document.querySelector(".overview").classList.toggle("show");
 
@@ -16,7 +17,6 @@ export default function renderBooks(data) {
     const bookOverviewGeneratedHTML = compiledTemplate(data);
 
     const container = document.querySelector(".overview");
-    console.log(bookOverviewGeneratedHTML);
     container.insertAdjacentHTML("afterbegin", bookOverviewGeneratedHTML);
   } else {
     container.insertAdjacentHTML("beforeend", "Geen boeken gevonden!");
