@@ -259,6 +259,13 @@ figure.suggestion.pink h2 {
   background: #d8127c;
 }
 
+/*=====  End of suggestion block  ======*/
+
+.overview-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .loading {
   color: black;
   font-size: 5em;
