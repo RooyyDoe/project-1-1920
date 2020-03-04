@@ -5,11 +5,11 @@ function renderBooks(data) {
 
   console.log("data", data);
 
-  document.querySelector(".wrapper").classList.toggle("hide");
-  document.querySelector("html").classList.toggle("overflow-y");
-  document.querySelector(".content-wrapper").classList.toggle("hide");
-  document.querySelector(".overview").classList.toggle("show");
-  document.querySelector(".overview-header").classList.toggle("show");
+  // document.querySelector(".wrapper").classList.toggle("hide");
+  // document.querySelector("html").classList.toggle("overflow-y");
+  // document.querySelector(".content-wrapper").classList.toggle("hide");
+  // document.querySelector(".overview").classList.toggle("show");
+  // document.querySelector(".overview-header").classList.toggle("show");
 
   if (results.length !== 0) {
     const overviewTemplate = document.getElementById("overviewTemplate")
@@ -26,17 +26,17 @@ function renderBooks(data) {
 
 function renderDetail(data) {
   console.log('filterd dataaa', data)
-  document.querySelector(".overview").classList.toggle("show");
-  document.querySelector(".detail-container").classList.toggle("show");
-  document.querySelector(".overview-header").classList.toggle("show");
-  document.querySelector("html").classList.toggle("overflow-y");
-  document.querySelector(".fullscreen").classList.toggle("show");
+  // document.querySelector(".overview").classList.toggle("show");
+  // document.querySelector(".container__detail").classList.toggle("show");
+  // document.querySelector(".overview-header").classList.toggle("show");
+  // document.querySelector("html").classList.toggle("overflow-y");
+  // document.querySelector(".fullscreen").classList.toggle("show");
 
   const detailTemplate = document.getElementById("detailTemplate").textContent;
   const compiledTemplate = Handlebars.compile(detailTemplate);
   const bookDetailGeneratedHTML = compiledTemplate(data);
 
-  const container = document.querySelector(".detail-container");
+  const container = document.querySelector(".container__detail");
   container.insertAdjacentHTML("beforeend", bookDetailGeneratedHTML);
 }
 
