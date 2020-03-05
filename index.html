@@ -145,11 +145,11 @@
         <div class="radio-buttons-background">
           <p>Achtergrond kleur</p>
           <div>
-            <input type="radio" name="color" id="rgb(57, 233, 163);" checked/>
+            <input type="radio" name="color" id="rgb(57, 233, 163);" checked />
             <label id="green" for="rgb(57, 233, 163);"></label>
-            <input type="radio" name="color" id="#f3838e"/>
+            <input type="radio" name="color" id="#f3838e" />
             <label id="red" for="#f3838e"></label>
-            <input type="radio" name="color" id="#a3caeb"/>
+            <input type="radio" name="color" id="#a3caeb" />
             <label id="blue" for="#a3caeb"></label>
             <input type="radio" name="color" id="#db00ff" />
             <label id="purple" for="#db00ff"></label>
@@ -158,11 +158,11 @@
         <div class="radio-buttons-font">
           <p>Lettertype</p>
           <div>
-            <input type="radio" name="font" id="Montserrat" checked/>
+            <input type="radio" name="font" id="Montserrat" checked />
             <label for="Montserrat">Montserrat</label>
-            <input type="radio" name="font" id="Oxanium"/>
+            <input type="radio" name="font" id="Oxanium" />
             <label for="Oxanium">Oxanium</label>
-            <input type="radio" name="font" id="Righteous"/>
+            <input type="radio" name="font" id="Righteous" />
             <label for="Righteous">Righteous</label>
             <input type="radio" name="font" id="Lobster" />
             <label for="Lobster">Lobster</label>
@@ -171,13 +171,13 @@
         <div class="radio-buttons-text-color">
           <p>Tekst kleur</p>
           <div>
-            <input type="radio" name="font-color" id="#fff" checked/>
+            <input type="radio" name="font-color" id="#fff" checked />
             <label id="black-text2" for="fff"></label>
-            <input type="radio" name="font-color" id="rgb(243, 131, 142)"/>
+            <input type="radio" name="font-color" id="rgb(243, 131, 142)" />
             <label id="red-text2" for="rgb(243, 131, 142)"></label>
-            <input type="radio" name="font-color" id="rgb(163, 202, 235)"/>
+            <input type="radio" name="font-color" id="rgb(163, 202, 235)" />
             <label id="blue-text2" for="rgb(163, 202, 235)"></label>
-            <input type="radio" name="font-color" id="rgb(57, 233, 163)"/>
+            <input type="radio" name="font-color" id="rgb(57, 233, 163)" />
             <label id="green-text2" for="rgb(57, 233, 163)"></label>
             <input type="radio" name="font-color" id="rgb(219, 0, 255)" />
             <label id="purple-text2" for="rgb(219, 0, 255)"></label>
@@ -207,6 +207,7 @@
       {{#each this}}
         <article class="template">
             <div id="section1">
+                <div>
                     <div class="first-section-1">
                         <h1 class="editable" contenteditable>Titel</h1>
                         <h2 class="editable" contenteditable>Sub Titel</h2>
@@ -223,17 +224,20 @@
                         <p>Datum:&nbsp; </p>
                         <span class="editable" contenteditable> 00 - 00 - 0000</span>
                     </div>
+                </div>
             </div>
             <div id="section2">
-                <div class="content">
-                    <h2 class="editable" contenteditable>{{titles.[0]}}</h2>
-                    <p class="editable" contenteditable>* punt 1 <br><br> * punt 2 <br><br> * punt 3</p>
-                </div>
-                <div class="section-image">
-                    <img src="{{coverimages.[1]}}">
-                    {{#with authors}}
-                        <p class="editable author" contenteditable>Auteur: {{this}} </p>
-                    {{/with}}
+                <div>
+                    <div class="content">
+                        <h2 class="editable" contenteditable>{{titles.[0]}}</h2>
+                        <p class="editable" contenteditable>* punt 1 <br><br> * punt 2 <br><br> * punt 3</p>
+                    </div>
+                    <div class="section-image">
+                        <img src="{{coverimages.[1]}}">
+                        {{#with authors}}
+                            <p class="editable author" contenteditable>Auteur: {{this}} </p>
+                        {{/with}}
+                    </div>
                 </div>
             </div>
               <div class="author-detail" id="section3">
@@ -247,6 +251,7 @@
               <div class="author-detail-books"></div>
               </div>
             <div id="section4">
+            <div>
                 <div class="content-section-4">
                     <h2 class="editable" contenteditable>Weetjes over {{titles.[0]}}</h2>
                     <div class="summary-wrap">
@@ -274,7 +279,7 @@
                         <p class="editable" contenteditable> {{this}} </p>
                     {{/with}}
                 </div>
-
+            </div>
             </div>
         </article>
       {{/each}}
