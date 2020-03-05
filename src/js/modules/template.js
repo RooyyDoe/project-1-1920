@@ -12,3 +12,14 @@ document.querySelectorAll(".radio-buttons-font label").forEach(label => {
         console.log(label)
     });
 });
+
+document.querySelectorAll(".radio-buttons-text-color label").forEach(label => {
+    label.addEventListener("click", () => {
+        const color = label.getAttribute('for');
+        document.querySelector('#section1').setAttribute('style', `color: ${color}`)
+        document.querySelector('#section2').setAttribute('style', `color: ${color}`)
+        document.querySelector('#section3').setAttribute('style', `color: ${color}`)
+        document.querySelector('#section4').setAttribute('style', `color: ${color}`)
+    });
+});
+

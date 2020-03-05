@@ -130,25 +130,46 @@
         <h2>Pas je presentatie aan!</h2>
         <div class="radio-buttons-background">
           <p>Achtergrond kleur</p>
-          <label for="green">Groen</label>
-          <input type="radio" name="color" id="green"/>
-          <label for="red">Rood</label>
-          <input type="radio" name="color" id="red"/>
-          <label for="blue">Blauw</label>
-          <input type="radio" name="color" id="blue"/>
-          <label for="purple">Paars</label>
-          <input type="radio" name="color" id="purple" />
+          <div>
+            <input type="radio" name="color" id="rgb(57, 233, 163);" checked/>
+            <label id="green" for="rgb(57, 233, 163);"></label>
+            <input type="radio" name="color" id="#f3838e"/>
+            <label id="red" for="#f3838e"></label>
+            <input type="radio" name="color" id="#a3caeb"/>
+            <label id="blue" for="#a3caeb"></label>
+            <input type="radio" name="color" id="#db00ff" />
+            <label id="purple" for="#db00ff"></label>
+          </div>
         </div>
         <div class="radio-buttons-font">
           <p>Lettertype</p>
-          <label for="Montserrat">Montserrat</label>
-          <input type="radio" name="font" id="Montserrat"/>
-          <label for="Oxanium">Oxanium</label>
-          <input type="radio" name="font" id="Oxanium"/>
-          <label for="kids">Kids</label>
-          <input type="radio" name="font" id="kids"/>
-          <label for="purple">Paars</label>
-          <input type="radio" name="font" id="purple" />
+          <div>
+            <input type="radio" name="font" id="Montserrat" checked/>
+            <label for="Montserrat">Montserrat</label>
+            <input type="radio" name="font" id="Oxanium"/>
+            <label for="Oxanium">Oxanium</label>
+            <input type="radio" name="font" id="Righteous"/>
+            <label for="Righteous">Righteous</label>
+            <input type="radio" name="font" id="Lobster" />
+            <label for="Lobster">Lobster</label>
+          </div>
+        </div>
+        <div class="radio-buttons-text-color">
+          <p>Tekst kleur</p>
+          <div>
+            <input type="radio" name="font-color" id="#fff" checked/>
+            <label id="black-text2" for="fff"></label>
+            <input type="radio" name="font-color" id="rgb(243, 131, 142)"/>
+            <label id="red-text2" for="rgb(243, 131, 142)"></label>
+            <input type="radio" name="font-color" id="rgb(163, 202, 235)"/>
+            <label id="blue-text2" for="rgb(163, 202, 235)"></label>
+            <input type="radio" name="font-color" id="rgb(57, 233, 163)"/>
+            <label id="green-text2" for="rgb(57, 233, 163)"></label>
+            <input type="radio" name="font-color" id="rgb(219, 0, 255)" />
+            <label id="purple-text2" for="rgb(219, 0, 255)"></label>
+            <input type="radio" name="font-color" id="#facc93" />
+            <label id="orange-text2" for="#facc93"></label>
+          </div>
         </div>
       </div>
       <button class="fullscreen">Volledig scherm</button>
@@ -183,7 +204,10 @@
                     <p contenteditable>Auteur: {{this}} </p>
                 {{/with}}
             </div>
-            <div id="section3"><h1>Meer over de auteur</h1></div>
+            <div class="author-detail" id="section3">
+              <h2>Meer boeken geschreven door de auteur</h2>
+              <div class="author-detail-books"></div>
+            </div>
             <div id="section4">
                 <p>Uitgebracht in: {{year}}</p>
 
@@ -204,6 +228,16 @@
                 {{/with}}
             </div>
         </article>
+      {{/each}}
+    </script>
+
+    <script id="authorTemplate" type="text/x-handlebars-template">
+      {{#each this}}
+      <a href="#book/{{id}}">
+          <article class="overview-wrapper">
+              <img src="{{coverimages.[1]}}">
+          </article>
+      </a>
       {{/each}}
     </script>
 

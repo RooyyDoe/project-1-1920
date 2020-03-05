@@ -5,12 +5,6 @@ function renderBooks(data) {
 
   console.log("data", data);
 
-  // document.querySelector(".wrapper").classList.toggle("hide");
-  // document.querySelector("html").classList.toggle("overflow-y");
-  // document.querySelector(".content-wrapper").classList.toggle("hide");
-  // document.querySelector(".overview").classList.toggle("show");
-  // document.querySelector(".overview-header").classList.toggle("show");
-
   if (results.length !== 0) {
     const overviewTemplate = document.getElementById("overviewTemplate")
       .textContent;
@@ -26,11 +20,6 @@ function renderBooks(data) {
 
 function renderDetail(data) {
   console.log('filterd dataaa', data)
-  // document.querySelector(".overview").classList.toggle("show");
-  // document.querySelector(".container__detail").classList.toggle("show");
-  // document.querySelector(".overview-header").classList.toggle("show");
-  // document.querySelector("html").classList.toggle("overflow-y");
-  // document.querySelector(".fullscreen").classList.toggle("show");
 
   const detailTemplate = document.getElementById("detailTemplate").textContent;
   const compiledTemplate = Handlebars.compile(detailTemplate);
@@ -40,7 +29,19 @@ function renderDetail(data) {
   container.insertAdjacentHTML("beforeend", bookDetailGeneratedHTML);
 }
 
+function renderAuthorBooks(data) {
+  console.log('author books', data)
+  
+  const authorTemplate = document.getElementById("authorTemplate").textContent;
+  const compiledTemplate = Handlebars.compile(authorTemplate);
+  const authorGeneratedHTML = compiledTemplate(data);
+
+  const container = document.querySelector(".author-detail-books");
+  container.insertAdjacentHTML("beforeend", authorGeneratedHTML);
+}
+
 export {
   renderBooks,
-  renderDetail
+  renderDetail,
+  renderAuthorBooks,
 }
