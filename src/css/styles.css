@@ -144,12 +144,22 @@ h1 {
   transform: scale(0.95);
 }
 
-.loading {
+.loader1,
+.loader2 {
   color: black;
-  font-size: 5em;
+  font-size: 3em;
   text-align: center;
-  visibility: hidden;
+  margin: 0em auto;
 }
+
+.loader1 img,
+.loader2 img {
+  height: 8em;
+}
+
+.loader1 p:after, .loader2 p:after {
+  content: ' .';
+  animation: dots 1s steps(5, end) infinite;}
 
 .overview {
   background-color: white;
@@ -414,6 +424,10 @@ h1 {
   padding: 1em 2em;
 }
 
+.options > div {
+  margin: 1.5em;
+}
+
 /* background colors */
 .radio-buttons-background p {
   background-color: black;
@@ -496,27 +510,27 @@ h1 {
 }
 
 #black-text2 {
-  background-color: #636363;
+  color: #636363;
 }
 
 #red-text2 {
-  background-color: rgb(243, 131, 142);
+  color: rgb(243, 131, 142);
 }
 
 #blue-text2 {
-  background-color: rgb(163, 202, 235);
+  color: rgb(163, 202, 235);
 }
 
 #green-text2 {
-  background-color: rgb(57, 233, 163);
+  color: rgb(57, 233, 163);
 }
 
 #purple-text2 {
-  background-color: rgb(219, 0, 255);
+  color: rgb(219, 0, 255);
 }
 
 #orange-text2 {
-  background-color: #facc93;
+  color: #facc93;
 }
 
 /* RADIO BUTTONS */
@@ -531,12 +545,12 @@ input[type="radio"] {
 
 .radio-buttons-font input[type="radio"]:checked + label:after {
   content: "\2713";
-  margin-left: 15%;
+  margin-left: 10%;
 }
 
 .radio-buttons-text-color input[type="radio"]:checked + label:after {
   content: "\2713";
-  margin-left: 45%;
+  margin-left: 10%;
 }
 
 label {

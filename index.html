@@ -39,7 +39,7 @@
         <h1>Thema's</h1>
         <div class="suggestion-wrapper">
           <a href="#overview" class="greenBorder">
-            <button value="dieren">
+            <button value="Dieren">
               <figure class="suggestion green">
                 <img src="./src/images/dieren.jpg" alt="dieren" />
                 <figcaption>
@@ -138,6 +138,10 @@
         </h2>
       </div>
       <div class="overview" id="main"></div>
+      <div class="loader1">
+        <img src="./src/images/loading.gif" alt="Laden">
+        <p>Laden</p>
+      </div>
     </div>
     <div class="container__detail">
       <div class="options">
@@ -171,24 +175,28 @@
         <div class="radio-buttons-text-color">
           <p>Tekst kleur</p>
           <div>
-            <input type="radio" name="font-color" id="#fff" checked />
-            <label id="black-text2" for="fff"></label>
+            <input type="radio" name="font-color" id="#000" checked />
+            <label id="black-text2" for="#000">Zwart</label>
             <input type="radio" name="font-color" id="rgb(243, 131, 142)" />
-            <label id="red-text2" for="rgb(243, 131, 142)"></label>
+            <label id="red-text2" for="rgb(243, 131, 142)">Rood</label>
             <input type="radio" name="font-color" id="rgb(163, 202, 235)" />
-            <label id="blue-text2" for="rgb(163, 202, 235)"></label>
+            <label id="blue-text2" for="rgb(163, 202, 235)">Blauw</label>
             <input type="radio" name="font-color" id="rgb(57, 233, 163)" />
-            <label id="green-text2" for="rgb(57, 233, 163)"></label>
+            <label id="green-text2" for="rgb(57, 233, 163)">Groen</label>
             <input type="radio" name="font-color" id="rgb(219, 0, 255)" />
-            <label id="purple-text2" for="rgb(219, 0, 255)"></label>
+            <label id="purple-text2" for="rgb(219, 0, 255)">Paars</label>
             <input type="radio" name="font-color" id="#facc93" />
-            <label id="orange-text2" for="#facc93"></label>
+            <label id="orange-text2" for="#facc93">Oranje</label>
           </div>
         </div>
       </div>
       <a class="fullscreen"
         ><img src="./src/images/increase.png" class="icon"
       /></a>
+      <div class="loader2">
+        <img src="./src/images/loading.gif" alt="Laden">
+        <p>Laden</p>
+      </div>
     </div>
 
     <script id="overviewTemplate" type="text/x-handlebars-template">

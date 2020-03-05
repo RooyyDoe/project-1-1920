@@ -5,8 +5,6 @@ function search() {
   document.querySelector(".overview").innerHTML = "";
   // Get search value
   const input = document.querySelector("#search-input").value;
-  // Give user feedback
-  document.querySelector(".results-feedback").innerHTML = input;
   overview.genreOverview(input);
 }
 

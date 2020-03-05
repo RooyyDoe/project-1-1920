@@ -22,8 +22,11 @@ async function genreOverview(input) {
         console.log('books: ', books)
         console.log(books);
         console.log('test')
+        // Give user feedback
+        document.querySelector(".results-feedback").innerHTML = input;
         // Render books
         render.renderBooks(books);
+        document.querySelector('.loader1').setAttribute('style', 'display: none')
     } catch (err) {
         console.log(err);
     } finally {
@@ -64,6 +67,7 @@ async function fetchDetailBook(id) {
 
     render.renderDetail(books);
     render.renderAuthorBooks(authorBooks);
+    document.querySelector('.loader2').setAttribute('style', 'display: none')
 }
 
 export {
