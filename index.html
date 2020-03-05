@@ -8,10 +8,24 @@
   <body>
     <div class="header">
       <a href=""><img src="./src/images/logo.66b1d35.png"/></a>
+      <h1>
+        <span class="redLetter">W</span><span class="blueLetter">e</span
+        ><span class="greenLetter">r</span><span class="blueLetter">k</span
+        ><span class="purpleLetter">s</span><span class="redLetter">t</span
+        ><span class="pinkLetter">u</span><span class="greenLetter">k</span>
+
+        <span class="blueLetter">a</span><span class="purpleLetter">s</span
+        ><span class="redLetter">s</span><span class="pinkLetter">i</span
+        ><span class="blueLetter">s</span><span class="greenLetter">t</span
+        ><span class="purpleLetter">e</span><span class="redLetter">n</span
+        ><span class="pinkLetter">t</span>
+      </h1>
     </div>
     <div class="container__home">
       <div class="wrapper">
-        <h1 contenteditable>Over welk boek wil je een presentatie over maken?</h1>
+        <h1 contenteditable>
+          Over welk boek wil je een presentatie over maken?
+        </h1>
         <div class="search-wrapper">
           <input
             id="search-input"
@@ -24,7 +38,7 @@
       <div class="content-wrapper">
         <h1>Thema's</h1>
         <div class="suggestion-wrapper">
-          <a href="#overview">
+          <a href="#overview" class="greenBorder">
             <button value="dieren">
               <figure class="suggestion green">
                 <img src="./src/images/dieren.jpg" alt="dieren" />
@@ -34,7 +48,7 @@
               </figure>
             </button>
           </a>
-          <a href="#overview">
+          <a href="#overview" class="redBorder">
             <button value="Natuur">
               <figure class="suggestion red">
                 <img src="./src/images/natuur.jpg" alt="natuur" />
@@ -44,7 +58,7 @@
               </figure>
             </button>
           </a>
-          <a href="#overview">
+          <a href="#overview" class="purpleBorder">
             <button value="Sport">
               <figure class="suggestion purple">
                 <img src="./src/images/sport.jpg" alt="sport" />
@@ -54,7 +68,7 @@
               </figure>
             </button>
           </a>
-          <a href="#overview">
+          <a href="#overview" class="blueBorder">
             <button value="Wetenschap">
               <figure class="suggestion blue">
                 <img src="./src/images/techniek.jpg" alt="techniek" />
@@ -64,7 +78,7 @@
               </figure>
             </button>
           </a>
-          <a href="#overview">
+          <a href="#overview" class="pinkBorder">
             <button value="Steden">
               <figure class="suggestion pink">
                 <img src="./src/images/landen.jpg" alt="landen" />
@@ -73,8 +87,8 @@
                 </figcaption>
               </figure>
             </button>
-         </a>
-          <a href="#overview">
+          </a>
+          <a href="#overview" class="blueBorder">
             <button value="Social media">
               <figure class="suggestion blue">
                 <img src="./src/images/socialmedia.jpg" alt="socialmedia" />
@@ -84,7 +98,7 @@
               </figure>
             </button>
           </a>
-          <a href="#overview">
+          <a href="#overview" class="purpleBorder">
             <button value="Muziek">
               <figure class="suggestion purple">
                 <img src="./src/images/muziek.jpg" alt="muziek" />
@@ -94,7 +108,7 @@
               </figure>
             </button>
           </a>
-          <a href="#overview">
+          <a href="#overview" class="redBorder">
             <button value="Geschiedenis">
               <figure class="suggestion red">
                 <img src="./src/images/geschiedenis.jpg" alt="geschiedenis" />
@@ -104,7 +118,7 @@
               </figure>
             </button>
           </a>
-          <a href="#overview">
+          <a href="#overview" class="greenBorder">
             <button value="Culturen">
               <figure class="suggestion green">
                 <img src="./src/images/culturen.jpg" alt="culturen" />
@@ -117,14 +131,14 @@
         </div>
       </div>
     </div>
-   <div class="container__overview">
-    <div class="overview-header">
-      <h2>
-        Gevonden resultaten voor: "<span class="results-feedback"></span>"
-      </h2>
+    <div class="container__overview">
+      <div class="overview-header">
+        <h2>
+          Gevonden resultaten voor: "<span class="results-feedback"></span>"
+        </h2>
+      </div>
+      <div class="overview" id="main"></div>
     </div>
-    <div class="overview" id="main"></div>
-   </div>
     <div class="container__detail">
       <div class="options">
         <h2>Pas je presentatie aan!</h2>
@@ -172,7 +186,9 @@
           </div>
         </div>
       </div>
-      <button class="fullscreen">Volledig scherm</button>
+      <a class="fullscreen"
+        ><img src="./src/images/increase.png" class="icon"
+      /></a>
     </div>
 
     <script id="overviewTemplate" type="text/x-handlebars-template">
@@ -191,41 +207,74 @@
       {{#each this}}
         <article class="template">
             <div id="section1">
-                <p>Naam: </p><span class="editable" contenteditable> Jouw naam hier</span>
-                <p>Achternaam: </p><span class="editable" contenteditable> Jouw achternaam hier</span>
-                <p>Klas: </p></p><span class="editable" contenteditable> Jouw klas hier</span>
-                <p>Datum: </p></p><span class="editable" contenteditable> Datum</span>
-                <p>Groep: </p></p><span class="editable" contenteditable> Jouw groep hier</span>
+                    <div class="first-section-1">
+                        <h1 class="editable" contenteditable>Titel</h1>
+                        <h2 class="editable" contenteditable>Sub Titel</h2>
+                    </div>
+                    <div class="name-section">
+                        <p>Naam:&nbsp; </p>
+                        <span class="editable" contenteditable> Jouw naam hier</span>
+                    </div>
+                    <div class="klas-section">
+                        <p>Klas:&nbsp; </p>
+                        <span class="editable" contenteditable> Jouw klas hier</span>
+                    </div>
+                    <div class="datum-section">
+                        <p>Datum:&nbsp; </p>
+                        <span class="editable" contenteditable> 00 - 00 - 0000</span>
+                    </div>
             </div>
             <div id="section2">
-                <h2>{{titles.[0]}}</h2>
-                <img src="{{coverimages.[1]}}">
-                {{#with authors}}
-                    <p contenteditable>Auteur: {{this}} </p>
-                {{/with}}
+                <div class="content">
+                    <h2 class="editable" contenteditable>{{titles.[0]}}</h2>
+                    <p class="editable" contenteditable>* punt 1 <br><br> * punt 2 <br><br> * punt 3</p>
+                </div>
+                <div class="section-image">
+                    <img src="{{coverimages.[1]}}">
+                    {{#with authors}}
+                        <p class="editable author" contenteditable>Auteur: {{this}} </p>
+                    {{/with}}
+                </div>
             </div>
-            <div class="author-detail" id="section3">
-              <h2>Meer boeken geschreven door de auteur</h2>
+              <div class="author-detail" id="section3">
+                <div>
+                  {{#with authors}}
+                      <h1 class="editable" contenteditable>Meer over {{this.[0]}}</h1>
+                  {{/with}}
+                  <p class="editable" contenteditable>* punt 1 <br><br> * punt 2 <br><br> * punt 3</p>
+                </div>
+                <h2>Meer boeken geschreven door de auteur</h2>
               <div class="author-detail-books"></div>
-            </div>
+              </div>
             <div id="section4">
-                <p>Uitgebracht in: {{year}}</p>
+                <div class="content-section-4">
+                    <h2 class="editable" contenteditable>Weetjes over {{titles.[0]}}</h2>
+                    <div class="summary-wrap">
+                        <p class="editable" contenteditable>Samenvatting van boek</p>
+                        {{#with summaries}}
+                            <p class="editable" contenteditable> {{this}} </p>
+                        {{/with}}
+                    </div>
+                </div>
+                <div class="year-section-4">
+                    <p class="editable" contenteditable> Uitgebracht in</p>
+                    <p class="editable" contenteditable>{{year}}</p >
+                </div>
 
-                {{#with publisher}}
-                  <p contenteditable>Uitgeverij: {{this}} </p>
-                {{/with}}
+                <div class="publisher-section-4">
+                    <p class="editable" contenteditable>Uitgeverij </p>
+                    {{#with publisher}}
+                        <p class="editable" contenteditable>{{this}} </p>
+                    {{/with}}
+                </div>
 
-                {{#with languages}}
-                  <p contenteditable>Taal: {{this}} </p>
-                {{/with}}
+                <div class="language-section-4">
+                    <p class="editable" contenteditable>Taal </p>
+                    {{#with languages}}
+                        <p class="editable" contenteditable> {{this}} </p>
+                    {{/with}}
+                </div>
 
-                {{#with summaries}}
-                  <p contenteditable>Samenvatting: {{this}} </p>
-                {{/with}}
-
-                {{#with description}}
-                  <p contenteditable>Over: {{this}} </p>
-                {{/with}}
             </div>
         </article>
       {{/each}}
@@ -233,11 +282,9 @@
 
     <script id="authorTemplate" type="text/x-handlebars-template">
       {{#each this}}
-      <a href="#book/{{id}}">
           <article class="overview-wrapper">
               <img src="{{coverimages.[1]}}">
           </article>
-      </a>
       {{/each}}
     </script>
 

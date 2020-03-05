@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: kids;
-  src: url(../fonts/Alice\ and\ the\ Wicked\ Monster.ttf);
+  src: url(../fonts/Alice\and\the\Wicked\Monster.ttf);
 }
 
 html {
@@ -39,6 +39,7 @@ body {
   top: 0;
   position: sticky;
   display: flex;
+  align-items: center;
   box-sizing: border-box;
 }
 
@@ -53,12 +54,37 @@ body {
   height: 70px;
 }
 
+.header > h1 {
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding-left: 1.5em;
+  font-size: 1.5em;
+}
+
+.blueLetter {
+  color: #00a3da;
+}
+
+.redLetter {
+  color: #d8232a;
+}
+
+.greenLetter {
+  color: #019949;
+}
+
+.purpleLetter {
+  color: #812c7c;
+}
+
+.pinkLetter {
+  color: #d8127c;
+}
+
 h1 {
   text-align: left;
   font-size: 2em;
   font-weight: 400;
-  padding-left: 0.5em;
-  color: black;
 }
 
 /*=============================================
@@ -87,7 +113,7 @@ h1 {
   padding: 1.5em;
   border: 2px solid white;
   font-size: 1em;
-  width: 60em;
+  width: 51.3em;
   font-family: "Montserrat";
   transition: all 0.3s ease-in-out;
 }
@@ -146,11 +172,19 @@ h1 {
   min-height: 100vh;
   background-color: rgb(57, 233, 163);
   margin: 0em auto;
-  padding: 2em 4em;
+  padding: 0em 4em;
 }
 
 .author-detail-books {
   display: flex;
+  overflow-x: auto;
+  width: 60em;
+  height: 20em;
+  align-items: center;
+}
+
+.author-detail-books * {
+  margin-right: 1em;
 }
 
 .template > div {
@@ -160,20 +194,208 @@ h1 {
 .template span {
   background-color: white;
   display: inline-block;
-  padding: .5em;
 }
 
 .transparant {
-  background-color: transparent!important;
-  padding: 0em!important;
+  background-color: transparent !important;
+  padding: 0em !important;
 }
 
-.container__detail button {
+#section1 {
+  position: relative;
+}
+
+.section-1-wrapper {
+  border: 1px solid black;
+  padding: 22em;
+}
+
+.first-section-1 {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  right: 5%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.editable {
+  background-color: white;
+}
+
+.first-section-1 > h1 {
+  font-size: 6em;
+  width: 100%;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.first-section-1 > h2 {
+  font-size: 2em;
+  font-weight: 500;
+  padding: 0;
+  text-align: center;
+}
+
+.name-section {
+  position: absolute;
+  top: 70%;
+  left: 5%;
+  right: 70%;
+  display: flex;
+  align-items: center;
+}
+
+.klas-section {
+  position: absolute;
+  top: 74%;
+  left: 5%;
+  right: 70%;
+  display: flex;
+  align-items: center;
+}
+
+.datum-section {
+  position: absolute;
+  top: 78%;
+  left: 5%;
+  right: 70%;
+  display: flex;
+  align-items: center;
+}
+
+#section2 {
+  position: relative;
+}
+
+.content > h2 {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  right: 5%;
+  font-size: 4em;
+  text-align: left;
+}
+
+.content > p {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  right: 30%;
+  font-size: 2em;
+  text-align: left;
+}
+
+.section-image {
+  position: absolute;
+  flex-direction: column;
+  top: 30%;
+  left: 80%;
+  display: flex;
+}
+
+.section-image > img {
+  max-width: 11em;
+}
+
+.section-image > p {
+  max-width: 12em;
+}
+
+#section3 {
+  position: relative;
+}
+.container__detail a {
+  cursor: pointer;
+  z-index: 10;
+  background-color: white;
+  padding: 1em;
+  border-radius: 1em;
   height: 2em;
   position: fixed;
-  bottom: 3em;
-  right: 3em;
+  bottom: 1em;
+  right: 1em;
 }
+
+.container__detail a:hover {
+  background-color: white;
+}
+
+.container__detail a img {
+  width: 2em;
+}
+
+#section4 {
+  position: relative;
+}
+
+.content-section-4 > h2 {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  font-size: 2.5em;
+  text-align: left;
+}
+
+.summary-wrap {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 25%;
+  left: 6%;
+  right: 5%;
+  font-size: 1.2em;
+  text-align: left;
+}
+
+.publisher-section-4 > p:nth-of-type(1),
+.year-section-4 > p:nth-of-type(1),
+.language-section-4 > p:nth-of-type(1),
+.summary-wrap p:nth-of-type(1) {
+  padding: 0;
+  margin: 0;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+.publisher-section-4 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60%;
+  left: 6%;
+  right: 5%;
+  font-size: 1.2em;
+  text-align: left;
+}
+
+.year-section-4 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 47%;
+  left: 6%;
+  right: 5%;
+  font-size: 1.2em;
+  text-align: left;
+}
+
+.language-section-4 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 73%;
+  left: 6%;
+  right: 5%;
+  font-size: 1.2em;
+  text-align: left;
+}
+
 /* OPTIONS */
 .options {
   min-width: 18em;
@@ -421,10 +643,20 @@ section > a:nth-child(20n + 20) {
 
 /*=====  End of search block section  ======*/
 
+.suggestion-wrapper a {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0em;
+  margin: 1em;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
 .suggestion-wrapper button {
   border: none;
   outline: none;
   cursor: pointer;
+  margin: 0em;
   background-color: transparent;
 }
 
@@ -434,11 +666,14 @@ section > a:nth-child(20n + 20) {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 2em;
 }
 
 .content-wrapper > h1 {
   margin-top: 7em;
-  padding-left: 3em;
+  width: 74%;
+  margin: 8em auto 0em;
+  display: block;
 }
 
 figure.suggestion {
@@ -446,10 +681,8 @@ figure.suggestion {
   position: relative;
   overflow: hidden;
   margin: 1em;
-  min-width: 400px;
-  max-width: 310px;
-  max-height: 250px;
-  width: 100%;
+  width: 310px;
+  height: 250px;
   background: #000000;
   color: #ffffff;
   text-align: center;
@@ -482,6 +715,7 @@ figure.suggestion h2 {
   position: absolute;
   left: 40px;
   right: 40px;
+  font-size: 2.2em;
   display: inline-block;
   background: #000000;
   -webkit-transform: skew(-10deg) rotate(-10deg) translate(0, -50%);
@@ -499,7 +733,7 @@ figure.suggestion h2 span {
 
 figure.suggestion:before {
   height: 100%;
-  width: 100%;
+  width: 110%;
   top: 0;
   left: 0;
   content: "";
@@ -537,6 +771,26 @@ figure.suggestion:hover:before,
 figure.suggestion.hover:before {
   -webkit-transform: rotate(110deg) translateY(-150%);
   transform: rotate(110deg) translateY(-150%);
+}
+
+.suggestion-wrapper > a.blueBorder {
+  border: 6px solid #00a3da;
+}
+
+.suggestion-wrapper > a.redBorder {
+  border: 6px solid #d8232a;
+}
+
+.suggestion-wrapper > a.greenBorder {
+  border: 6px solid #019949;
+}
+
+.suggestion-wrapper > a.purpleBorder {
+  border: 6px solid #812c7c;
+}
+
+.suggestion-wrapper > a.pinkBorder {
+  border: 6px solid #d8127c;
 }
 
 figure.suggestion.blue h2 {
@@ -609,4 +863,30 @@ figure.suggestion.pink h2 {
 
 .show-loading {
   visibility: initial;
+}
+
+@media print {
+  .fullscreen {
+    display: none;
+  }
+
+  .content > p {
+    position: absolute;
+    top: 40%;
+  }
+
+  .year-section-4 {
+    position: absolute;
+    top: 55%;
+  }
+
+  .publisher-section-4 {
+    position: absolute;
+    top: 70%;
+  }
+
+  .language-section-4 {
+    position: absolute;
+    top: 85%;
+  }
 }
