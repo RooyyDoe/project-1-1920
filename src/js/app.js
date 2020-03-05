@@ -16,12 +16,12 @@ routie({
     },
     // Detail page / Presentation templates
     'book/:id': (id) => {
-        filterClickedItem(id);
+        fetchDetailBook(id);
         utils.handleDetailState();
     }
 });
 
-async function filterClickedItem(id) {
+async function fetchDetailBook(id) {
      // Local storage for prototyping, REMOVE LATER
      let books = []
      let storedData = JSON.parse(localStorage.getItem('book'));

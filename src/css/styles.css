@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:400, 800");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Oxanium:200,300,400,500,600,700,800&display=swap');
+
+@font-face {
+  font-family: kids;
+  src: url(../fonts/Alice\ and\ the\ Wicked\ Monster.ttf);
+}
 
 html {
   margin: 0;
@@ -125,7 +131,11 @@ h1 {
 }
 
 .overview-header {
-  margin-left: 2em;
+  position: absolute;
+  z-index: 5;
+  background-color: rgba(150, 213, 226, 0.8);
+  width: 100%;
+  padding-left: 1.75em;
 }
 
 /* TEMPLATE */
@@ -134,18 +144,45 @@ h1 {
   min-height: 100vh;
   background-color: rgb(57, 233, 163);
   margin: 0em auto;
+  padding: 2em 4em;
 }
 
 .template > div {
   height: 100vh;
 }
 
+.template span {
+  background-color: white;
+  display: inline-block;
+  padding: .5em;
+}
+
+.transparant {
+  background-color: transparent!important;
+  padding: 0em!important;
+}
+
 .container__detail button {
   height: 2em;
+  position: fixed;
+  bottom: 3em;
+  right: 3em;
+}
+/* OPTIONS */
+.options {
+  padding: .5em 1.5em;
+}
+
+/* RADIO BUTTONS */
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  cursor: pointer;
 }
 
 /* Book articles */
-
 section {
   position: absolute;
   z-index: 1;

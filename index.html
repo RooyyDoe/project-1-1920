@@ -111,7 +111,6 @@
                 <figcaption>
                   <h2>Culturen</h2>
                 </figcaption>
-                <a href="#"></a>
               </figure>
             </button>
           </a>
@@ -127,17 +126,32 @@
     <div class="overview" id="main"></div>
    </div>
     <div class="container__detail">
-      <button class="fullscreen">Volledig scherm</button>
-      <div class="radio-buttons">
-        <label for="1">Optie 1</label>
-        <input type="radio" name="template" id="1" />
-        <label for="2">Optie 2</label>
-        <input type="radio" name="template" id="2" />
-        <label for="3">Optie 3</label>
-        <input type="radio" name="template" id="3" />
-        <label for="4">Optie 4</label>
-        <input type="radio" name="template" id="4" />
+      <div class="options">
+        <h2>Pas je presentatie aan!</h2>
+        <div class="radio-buttons-background">
+          <p>Achtergrond kleur</p>
+          <label for="green">Groen</label>
+          <input type="radio" name="color" id="green"/>
+          <label for="red">Rood</label>
+          <input type="radio" name="color" id="red"/>
+          <label for="blue">Blauw</label>
+          <input type="radio" name="color" id="blue"/>
+          <label for="purple">Paars</label>
+          <input type="radio" name="color" id="purple" />
+        </div>
+        <div class="radio-buttons-font">
+          <p>Lettertype</p>
+          <label for="Montserrat">Montserrat</label>
+          <input type="radio" name="font" id="Montserrat"/>
+          <label for="Oxanium">Oxanium</label>
+          <input type="radio" name="font" id="Oxanium"/>
+          <label for="kids">Kids</label>
+          <input type="radio" name="font" id="kids"/>
+          <label for="purple">Paars</label>
+          <input type="radio" name="font" id="purple" />
+        </div>
       </div>
+      <button class="fullscreen">Volledig scherm</button>
     </div>
 
     <script id="overviewTemplate" type="text/x-handlebars-template">
@@ -156,10 +170,11 @@
       {{#each this}}
         <article class="template">
             <div id="section1">
-                <h1>Naam Achternaam</h1>
-                <p>Klas</p>
-                <p>Datum</p>
-                <p>Groep</p>
+                <p>Naam: </p><span class="editable" contenteditable> Jouw naam hier</span>
+                <p>Achternaam: </p><span class="editable" contenteditable> Jouw achternaam hier</span>
+                <p>Klas: </p></p><span class="editable" contenteditable> Jouw klas hier</span>
+                <p>Datum: </p></p><span class="editable" contenteditable> Datum</span>
+                <p>Groep: </p></p><span class="editable" contenteditable> Jouw groep hier</span>
             </div>
             <div id="section2">
                 <h2>{{titles.[0]}}</h2>
@@ -194,5 +209,6 @@
 
     <script src="./src/js/vendor/handlebars-v4.7.3.js"></script>
     <script type="module" src="./src/js/app.js"></script>
+    <script src="./src/js/modules/template.js"></script>
   </body>
 </html>

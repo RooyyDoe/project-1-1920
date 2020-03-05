@@ -27,13 +27,16 @@ function handleOverviewState() {
 function handleDetailState() {
     document.querySelector(".container__home").setAttribute("style", "display: none;");
     document.querySelector(".container__overview").setAttribute("style", "display: none;");
-    document.querySelector(".container__detail").setAttribute("style", "display: initial;");
+    document.querySelector(".container__detail").setAttribute("style", "display: flex;");
     document.querySelector("html").setAttribute("style", "overflow-y: initial;");
 };
 
 document.querySelector(".fullscreen").addEventListener("click", () => {
     document.querySelector(".header").classList.toggle("hide");
-    document.querySelector(".radio-buttons").classList.toggle("hide");
+    document.querySelector(".options").classList.toggle("hide");
+    document.querySelectorAll(".editable").forEach(span => {
+        span.classList.toggle("transparant");
+    })
 });
 
 document.querySelectorAll(".container__home .suggestion-wrapper button").forEach(button => {
