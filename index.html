@@ -140,17 +140,34 @@
       <div class="overview" id="main"></div>
     </div>
     <div class="container__detail">
-      <button class="fullscreen">Volledig scherm</button>
-      <div class="radio-buttons">
-        <label for="1">Optie 1</label>
-        <input type="radio" name="template" id="1" />
-        <label for="2">Optie 2</label>
-        <input type="radio" name="template" id="2" />
-        <label for="3">Optie 3</label>
-        <input type="radio" name="template" id="3" />
-        <label for="4">Optie 4</label>
-        <input type="radio" name="template" id="4" />
+      <div class="options">
+        <h2>Pas je presentatie aan!</h2>
+        <div class="radio-buttons-background">
+          <p>Achtergrond kleur</p>
+          <label for="green">Groen</label>
+          <input type="radio" name="color" id="green" />
+          <label for="red">Rood</label>
+          <input type="radio" name="color" id="red" />
+          <label for="blue">Blauw</label>
+          <input type="radio" name="color" id="blue" />
+          <label for="purple">Paars</label>
+          <input type="radio" name="color" id="purple" />
+        </div>
+        <div class="radio-buttons-font">
+          <p>Lettertype</p>
+          <label for="Montserrat">Montserrat</label>
+          <input type="radio" name="font" id="Montserrat" />
+          <label for="Oxanium">Oxanium</label>
+          <input type="radio" name="font" id="Oxanium" />
+          <label for="kids">Kids</label>
+          <input type="radio" name="font" id="kids" />
+          <label for="purple">Paars</label>
+          <input type="radio" name="font" id="purple" />
+        </div>
       </div>
+      <a class="fullscreen"
+        ><img src="./src/images/increase.png" class="icon"
+      /></a>
     </div>
 
     <script id="overviewTemplate" type="text/x-handlebars-template">
@@ -169,37 +186,72 @@
       {{#each this}}
         <article class="template">
             <div id="section1">
-                <h1>Naam Achternaam</h1>
-                <p>Klas</p>
-                <p>Datum</p>
-                <p>Groep</p>
+                    <div class="first-section-1">
+                        <h1 class="editable" contenteditable>Titel</h1>
+                        <h2 class="editable" contenteditable>Sub Titel</h2>
+                    </div>
+                    <div class="name-section">
+                        <p>Naam:&nbsp; </p>
+                        <span class="editable" contenteditable> Jouw naam hier</span>
+                    </div>
+                    <div class="klas-section">
+                        <p>Klas:&nbsp; </p>
+                        <span class="editable" contenteditable> Jouw klas hier</span>
+                    </div>
+                    <div class="datum-section">
+                        <p>Datum:&nbsp; </p>
+                        <span class="editable" contenteditable> 00 - 00 - 0000</span>
+                    </div>
             </div>
             <div id="section2">
-                <h2>{{titles.[0]}}</h2>
-                <img src="{{coverimages.[1]}}">
-                {{#with authors}}
-                    <p contenteditable>Auteur: {{this}} </p>
-                {{/with}}
+                <div class="content">
+                    <h2 class="editable" contenteditable>{{titles.[0]}}</h2>
+                    <p class="editable" contenteditable>* punt 1 <br><br> * punt 2 <br><br> * punt 3</p>
+                </div>
+                <div class="section-image">
+                    <img src="{{coverimages.[1]}}">
+                    {{#with authors}}
+                        <p class="editable author" contenteditable>Auteur: {{this}} </p>
+                    {{/with}}
+                </div>
             </div>
-            <div id="section3"><h1>Meer over de auteur</h1></div>
+            <div id="section3">
+                <div class="content">
+                {{#with authors}}
+                    <h2 class="editable" contenteditable>Meer over {{this.[0]}}</h2>
+                {{/with}}
+                    <p class="editable" contenteditable>* punt 1 <br><br> * punt 2 <br><br> * punt 3</p>
+                </div>
+              </div>
             <div id="section4">
-                <p>Uitgebracht in: {{year}}</p>
+                <div class="content-section-4">
+                    <h2 class="editable" contenteditable>Weetjes over {{titles.[0]}}</h2>
+                    <div class="summary-wrap">
+                        <p class="editable" contenteditable>Samenvatting van boek</p>
+                        {{#with summaries}}
+                            <p class="editable" contenteditable> {{this}} </p>
+                        {{/with}}
+                    </div>
+                </div>
+                <div class="year-section-4">
+                    <p class="editable" contenteditable> Uitgebracht in</p>
+                    <p class="editable" contenteditable>{{year}}</p >
+                </div>
 
-                {{#with publisher}}
-                  <p contenteditable>Uitgeverij: {{this}} </p>
-                {{/with}}
+                <div class="publisher-section-4">
+                    <p class="editable" contenteditable>Uitgeverij </p>
+                    {{#with publisher}}
+                        <p class="editable" contenteditable>{{this}} </p>
+                    {{/with}}
+                </div>
 
-                {{#with languages}}
-                  <p contenteditable>Taal: {{this}} </p>
-                {{/with}}
+                <div class="language-section-4">
+                    <p class="editable" contenteditable>Taal </p>
+                    {{#with languages}}
+                        <p class="editable" contenteditable> {{this}} </p>
+                    {{/with}}
+                </div>
 
-                {{#with summaries}}
-                  <p contenteditable>Samenvatting: {{this}} </p>
-                {{/with}}
-
-                {{#with description}}
-                  <p contenteditable>Over: {{this}} </p>
-                {{/with}}
             </div>
         </article>
       {{/each}}
@@ -207,5 +259,6 @@
 
     <script src="./src/js/vendor/handlebars-v4.7.3.js"></script>
     <script type="module" src="./src/js/app.js"></script>
+    <script src="./src/js/modules/template.js"></script>
   </body>
 </html>

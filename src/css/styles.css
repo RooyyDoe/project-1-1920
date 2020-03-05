@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:400, 800");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oxanium:200,300,400,500,600,700,800&display=swap");
+
+@font-face {
+  font-family: kids;
+  src: url(../fonts/Alice\and\the\Wicked\Monster.ttf);
+}
 
 html {
   margin: 0;
@@ -152,7 +158,11 @@ h1 {
 }
 
 .overview-header {
-  margin-left: 2em;
+  position: absolute;
+  z-index: 5;
+  background-color: rgba(150, 213, 226, 0.8);
+  width: 100%;
+  padding-left: 1.75em;
 }
 
 /* TEMPLATE */
@@ -161,18 +171,234 @@ h1 {
   min-height: 100vh;
   background-color: rgb(57, 233, 163);
   margin: 0em auto;
+  padding: 0em 4em;
 }
 
 .template > div {
   height: 100vh;
 }
 
-.container__detail button {
+.template span {
+  background-color: white;
+  display: inline-block;
+  padding: 0.5em;
+}
+
+.transparant {
+  background-color: transparent !important;
+  padding: 0em !important;
+}
+
+#section1 {
+  position: relative;
+}
+
+.section-1-wrapper {
+  border: 1px solid black;
+  padding: 22em;
+}
+
+.first-section-1 {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  right: 5%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.editable {
+  background-color: white;
+}
+
+.first-section-1 > h1 {
+  font-size: 6em;
+  width: 100%;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.first-section-1 > h2 {
+  font-size: 2em;
+  font-weight: 500;
+  padding: 0;
+  text-align: center;
+}
+
+.name-section {
+  position: absolute;
+  top: 70%;
+  left: 5%;
+  right: 70%;
+  display: flex;
+  align-items: center;
+}
+
+.klas-section {
+  position: absolute;
+  top: 74%;
+  left: 5%;
+  right: 70%;
+  display: flex;
+  align-items: center;
+}
+
+.datum-section {
+  position: absolute;
+  top: 78%;
+  left: 5%;
+  right: 70%;
+  display: flex;
+  align-items: center;
+}
+
+#section2 {
+  position: relative;
+}
+
+.content > h2 {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  right: 5%;
+  font-size: 4em;
+  text-align: left;
+}
+
+.content > p {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  right: 30%;
+  font-size: 2em;
+  text-align: left;
+}
+
+.section-image {
+  position: absolute;
+  flex-direction: column;
+  top: 30%;
+  left: 80%;
+  display: flex;
+}
+
+.section-image > img {
+  max-width: 11em;
+}
+
+.section-image > p {
+  max-width: 12em;
+}
+
+#section3 {
+  position: relative;
+}
+.container__detail a {
+  cursor: pointer;
+  z-index: 10;
+  background-color: white;
+  padding: 1em;
+  border-radius: 1em;
   height: 2em;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+}
+
+.container__detail a:hover {
+  background-color: white;
+}
+
+.container__detail a img {
+  width: 2em;
+}
+
+#section4 {
+  position: relative;
+}
+
+.content-section-4 > h2 {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  font-size: 2.5em;
+  text-align: left;
+}
+
+.summary-wrap {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 25%;
+  left: 6%;
+  right: 5%;
+  font-size: 1.2em;
+  text-align: left;
+}
+
+.publisher-section-4 > p:nth-of-type(1),
+.year-section-4 > p:nth-of-type(1),
+.language-section-4 > p:nth-of-type(1),
+.summary-wrap p:nth-of-type(1) {
+  padding: 0;
+  margin: 0;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+.publisher-section-4 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60%;
+  left: 6%;
+  right: 5%;
+  font-size: 1.2em;
+  text-align: left;
+}
+
+.year-section-4 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 47%;
+  left: 6%;
+  right: 5%;
+  font-size: 1.2em;
+  text-align: left;
+}
+
+.language-section-4 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 73%;
+  left: 6%;
+  right: 5%;
+  font-size: 1.2em;
+  text-align: left;
+}
+
+/* OPTIONS */
+.options {
+  padding: 0.5em 1.5em;
+}
+
+/* RADIO BUTTONS */
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  cursor: pointer;
 }
 
 /* Book articles */
-
 section {
   position: absolute;
   z-index: 1;
@@ -491,4 +717,30 @@ figure.suggestion.pink h2 {
 
 .show-loading {
   visibility: initial;
+}
+
+@media print {
+  .fullscreen {
+    display: none;
+  }
+
+  .content > p {
+    position: absolute;
+    top: 40%;
+  }
+
+  .year-section-4 {
+    position: absolute;
+    top: 55%;
+  }
+
+  .publisher-section-4 {
+    position: absolute;
+    top: 70%;
+  }
+
+  .language-section-4 {
+    position: absolute;
+    top: 85%;
+  }
 }
