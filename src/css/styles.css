@@ -31,6 +31,7 @@ body {
   top: 0;
   position: sticky;
   display: flex;
+  align-items: center;
   box-sizing: border-box;
 }
 
@@ -43,6 +44,33 @@ body {
 .header > a > img {
   width: auto;
   height: 70px;
+}
+
+.header > h1 {
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding-left: 1.5em;
+  font-size: 1.5em;
+}
+
+.blueLetter {
+  color: #00a3da;
+}
+
+.redLetter {
+  color: #d8232a;
+}
+
+.greenLetter {
+  color: #019949;
+}
+
+.purpleLetter {
+  color: #812c7c;
+}
+
+.pinkLetter {
+  color: #d8127c;
 }
 
 h1 {
@@ -78,7 +106,7 @@ h1 {
   padding: 1.5em;
   border: 2px solid white;
   font-size: 1em;
-  width: 60em;
+  width: 51.3em;
   font-family: "Montserrat";
   transition: all 0.3s ease-in-out;
 }
@@ -271,7 +299,7 @@ section > a:nth-child(20n + 20) {
 
 .content-wrapper > h1 {
   margin-top: 7em;
-  width: 85%;
+  width: 74%;
   margin: 8em auto 0em;
   display: block;
 }
@@ -281,7 +309,7 @@ figure.suggestion {
   position: relative;
   overflow: hidden;
   margin: 1em;
-  width: 340px;
+  width: 295px;
   height: 250px;
   background: #000000;
   color: #ffffff;
