@@ -8,10 +8,10 @@ document.querySelectorAll(".radio-buttons-background label").forEach(label => {
 document.querySelectorAll(".radio-buttons-font label").forEach(label => {
     label.addEventListener("click", () => {
         const font = label.getAttribute('for');
-        document.querySelector('#section1 *').setAttribute('style', `font-family: ${font}`);
-        document.querySelector('#section2 *').setAttribute('style', `font-family: ${font}`);
-        document.querySelector('#section3 *').setAttribute('style', `font-family: ${font}`);
-        document.querySelector('#section4 *').setAttribute('style', `font-family: ${font}`);
+        document.querySelector('#section1 > div').setAttribute('style', `font-family: ${font}`);
+        document.querySelector('#section2 > div').setAttribute('style', `font-family: ${font}`);
+        document.querySelector('#section3 > div').setAttribute('style', `font-family: ${font}`);
+        document.querySelector('#section4 > div').setAttribute('style', `font-family: ${font}`);
     });
 });
 
