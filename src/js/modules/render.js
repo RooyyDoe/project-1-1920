@@ -19,7 +19,7 @@ function renderBooks(data) {
 }
 
 function renderDetail(data) {
-  console.log('filterd dataaa', data)
+  console.log('selected book', data)
 
   const detailTemplate = document.getElementById("detailTemplate").textContent;
   const compiledTemplate = Handlebars.compile(detailTemplate);

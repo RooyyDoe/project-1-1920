@@ -92,11 +92,9 @@ h1 {
 =============================================*/
 
 .wrapper {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  /* bring your own prefixes */
-  transform: translate(-50%, -50%);
+  width: 80%;
+  margin: 0em auto;
+  margin-top: 3em;
 }
 
 .wrapper h1 {
@@ -106,6 +104,7 @@ h1 {
 
 .search-wrapper {
   display: flex;
+  justify-content: center;
 }
 
 #search-input {
@@ -113,7 +112,7 @@ h1 {
   padding: 1.5em;
   border: 2px solid white;
   font-size: 1em;
-  width: 61em;
+  width: 100%;
   font-family: "Montserrat";
   transition: all 0.3s ease-in-out;
 }
@@ -132,12 +131,48 @@ h1 {
   font-family: "Montserrat";
   font-size: 1.5em;
   outline: none;
-  margin-left: 0.3em;
-  padding: 0.9em 3em;
+  margin-left: 1em;
+  padding: 0.9em 2em;
   border: none;
   color: white;
   background-color: rgba(254, 1, 0, 0.8);
   cursor: pointer;
+  transition: all 0.5s;
+}
+
+#search span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#search span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#search span {
+  padding-right: 25px;
+}
+
+#search span:after {
+  opacity: 0;
+  right: 0;
+}
+
+#search:hover {
+  transform: scale(1.1);
+  transition: 300ms;
+}
+
+#search:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 #search:active {
@@ -324,7 +359,7 @@ h1 {
 #section3 {
   position: relative;
 }
-.container__detail a {
+.container__detail a:nth-of-type(1) {
   cursor: pointer;
   z-index: 10;
   background-color: white;
@@ -334,6 +369,29 @@ h1 {
   position: fixed;
   bottom: 1em;
   right: 1em;
+  transition-duration: 100ms;
+}
+
+.container__detail a:nth-of-type(1):hover {
+  transform: scale(1.1);
+  transition-duration: 100ms;
+}
+
+.container__detail a:nth-of-type(2):hover {
+  transform: scale(1.1);
+  transition-duration: 100ms;
+}
+
+.container__detail a:nth-of-type(2) {
+  cursor: pointer;
+  z-index: 10;
+  background-color: white;
+  padding: 0.1em 1em;
+  border-radius: 1em;
+  position: fixed;
+  bottom: 1em;
+  transition-duration: 100ms;
+  right: 6em;
 }
 
 .container__detail a:hover {
@@ -519,6 +577,22 @@ h1 {
   box-sizing: border-box;
   height: 3em;
   background-color: white;
+}
+
+.radio-buttons-font > div > label:nth-of-type(1) {
+  font-family: "Montserrat";
+}
+
+.radio-buttons-font > div > label:nth-of-type(2) {
+  font-family: "Oxanium";
+}
+
+.radio-buttons-font > div > label:nth-of-type(3) {
+  font-family: "Righteous";
+}
+
+.radio-buttons-font > div > label:nth-of-type(4) {
+  font-family: "Lobster";
 }
 
 /* Text color */
@@ -717,9 +791,12 @@ section > a:nth-child(20n + 20) {
   margin-bottom: 2em;
 }
 
+.content-wrapper {
+  margin-top: -12em;
+}
+
 .content-wrapper > h1 {
-  margin-top: 7em;
-  width: 74%;
+  width: 82%;
   margin: 8em auto 0em;
   display: block;
 }
@@ -918,6 +995,10 @@ figure.suggestion.pink h2 {
     background-color: transparent;
   }
   .fullscreen {
+    display: none;
+  }
+
+  .print {
     display: none;
   }
 

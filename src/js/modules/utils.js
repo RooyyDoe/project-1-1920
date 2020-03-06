@@ -76,4 +76,20 @@ iconContainter.addEventListener("click", () => {
   }
 });
 
+const print = document.querySelector(".print");
+print.addEventListener("click", () => {
+  if (edit) {
+    icon.src = "./src/images/decrease.png";
+    document.querySelector(".header").classList.toggle("hide");
+    document.querySelector(".options").classList.toggle("hide");
+    document.querySelectorAll(".editable").forEach(span => {
+      span.classList.toggle("transparant");
+    });
+    edit = false;
+  } 
+  
+  window.print();
+
+});
+
 export { search, handleHomeState, handleOverviewState, handleDetailState };

@@ -56,6 +56,7 @@ async function fetchDetailBook(id) {
     // AUTHOR
     let author = [];
 
+    // LOCAL STORAGE FOR PROTOTYPING, REMOVE LATER
     let storedAuthors = JSON.parse(localStorage.getItem('authorbooks'));
     if (storedAuthors) {
         console.log('no fetch')
@@ -72,6 +73,16 @@ async function fetchDetailBook(id) {
         author = await get.getBooks(author);
         localStorage.setItem('authorbooks', JSON.stringify(await get.getBooks(author)));
     }; 
+
+    // ADD LATER
+    // if(books[0].authors != undefined) {
+    //     author = books[0].authors[0]
+    // }
+    // else {
+    //     author = "";
+    // }
+    // console.log('auteur', author)
+    // author = await get.getBooks(author);
 
     render.renderDetail(books);
     render.renderAuthorBooks(author);
