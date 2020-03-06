@@ -1,4 +1,4 @@
-# Subject research and presentation tool for children
+# BookPoint.
 
 The whole process of project 1 OBA will be documented here!
 
@@ -44,10 +44,18 @@ Live link: [Demo](https://rooyydoe.github.io/project-1-1920/)
 - [x] Writen box by author on presentation template
 - [x] Able to edit content that is in the presentation template
 - [x] Styling adjusted to children
+- [ ] Save templates which you can work on later
+- [ ] Add moveable elements in template
+
+## Small description
+
+Search for your book and create your own presentation using a template.
 
 ## Large description
 
-In the start screen of my product users are presented with a search input and theme suggestions. Out of this list of themes the user can select a theme which the user wants to know more about by clicking on it and the user can also use the search input to search for a specific theme. The user is then directed to a new page where all the books within the selected theme or search output are floating from the top of your screen down to the bottom. The books within the selected theme or search input are obtained using an OBA API. The user is now able to select one of the books that is floating down. When a certain book is selected, the user will be navigated to a new page where the user can select a presentation template. When the user has selected one of the presentation templates it will show all the data of the book on it. The user will also be able to edit the template in the way they like it to be. When the user wants to present the presentation they can click on full screen and they can present this to the class or teacher.
+In the start screen of my product users are presented with a search input and theme suggestions. Out of this list of themes the user can select a theme which the user wants to know more about by clicking on it and the user can also use the search input to search for a specific theme. The user is then directed to a new page where all the books within the selected theme or search output are floating from the top of your screen down to the bottom. 
+
+The books within the selected theme or search input are obtained using an OBA API. The user is now able to select one of the books that is floating down. When a certain book is selected, the user will be navigated to a new page where the user can select a presentation template. When the user has selected one of the presentation templates it will show all the data of the book on it. The user will also be able to edit the template in the way they like it to be. When the user wants to present the presentation they can click on full screen and they can present this to the class or teacher.
 
 ## Usage
 
