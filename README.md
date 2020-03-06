@@ -36,6 +36,8 @@ Live link: [Demo](https://rooyydoe.github.io/project-1-1920/)
 - [X] Generated presentation templates with the data of the books
 - [X] Full screen option for presentations
 - [X] Writen box by author on presentation template
+- [X] Able to edit content that is in the presentation template
+- [X] Styling adjusted to children
 
 ## Large description
 
