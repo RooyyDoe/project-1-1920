@@ -56,17 +56,25 @@ async function fetchDetailBook(id) {
     // AUTHOR
     let author = [];
 
-    if(books[0].authors != undefined) {
-        author = books[0].authors[0]
+    let storedAuthors = JSON.parse(localStorage.getItem('authorbooks'));
+    if (storedAuthors) {
+        console.log('no fetch')
+        author = storedAuthors;
     }
     else {
-        author = ""
-    }
-    console.log('autheur', author)
-    const authorBooks = await get.getBooks(author); 
+        if(books[0].authors != undefined) {
+            author = books[0].authors[0]
+        }
+        else {
+            author = "";
+        }
+        console.log('auteur', author)
+        author = await get.getBooks(author);
+        localStorage.setItem('authorbooks', JSON.stringify(await get.getBooks(author)));
+    }; 
 
     render.renderDetail(books);
-    render.renderAuthorBooks(authorBooks);
+    render.renderAuthorBooks(author);
     document.querySelector('.loader2').setAttribute('style', 'display: none')
 }
 
