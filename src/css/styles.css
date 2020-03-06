@@ -157,9 +157,11 @@ h1 {
   height: 8em;
 }
 
-.loader1 p:after, .loader2 p:after {
-  content: ' .';
-  animation: dots 1s steps(5, end) infinite;}
+.loader1 p:after,
+.loader2 p:after {
+  content: " .";
+  animation: dots 1s steps(5, end) infinite;
+}
 
 .overview {
   background-color: white;
@@ -186,9 +188,12 @@ h1 {
 }
 
 .author-detail-books {
+  position: absolute;
+  top: 55%;
+  left: 5%;
   display: flex;
   overflow-x: auto;
-  width: 60em;
+  width: 65em;
   height: 20em;
   align-items: center;
 }
@@ -284,7 +289,7 @@ h1 {
 
 .content > h2 {
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 5%;
   right: 5%;
   font-size: 4em;
@@ -337,6 +342,35 @@ h1 {
 
 .container__detail a img {
   width: 2em;
+}
+
+.author-detail > h2 {
+  position: absolute;
+  top: 48%;
+  left: 5%;
+  right: 5%;
+  font-size: 1.5em;
+  text-align: left;
+}
+
+.author-section > h2 {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  font-size: 2.5em;
+  text-align: left;
+}
+
+.author-section > p {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  right: 5%;
+  padding: 0;
+  margin: 0;
+  font-size: 1.3em;
+  font-weight: 500;
 }
 
 #section4 {
@@ -890,6 +924,10 @@ figure.suggestion.pink h2 {
   .content > p {
     position: absolute;
     top: 40%;
+  }
+
+  .author-detail-books {
+    width: 51em;
   }
 
   .year-section-4 {
